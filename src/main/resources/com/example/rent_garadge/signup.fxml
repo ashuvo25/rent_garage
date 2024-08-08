@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.signup_controller">
+   <left>
+      <Pane fx:id="left_pane" prefHeight="400.0" prefWidth="0.0" style="-fx-background-color: #e6ffe6;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="188.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LOGOS/vehicle.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane fx:id="right_pane" prefHeight="520.0" prefWidth="360.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <QuadCurve controlX="-120.19998168945312" controlY="-59.751708984375" endX="35.000030517578125" endY="-87.17840576171875" fill="#0a574438" layoutX="373.0" layoutY="230.0" startX="35.0" startY="175.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Label fx:id="signintext" layoutX="127.0" layoutY="106.0" text="Sign Up" textFill="#000000c0">
+               <font>
+                  <Font name="Monospaced Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="133.0" text="Email" textFill="#00000089">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="248.0" text="Conform Password" textFill="#00000089">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="signup_confrom_password" layoutX="68.0" layoutY="266.0" prefHeight="25.0" prefWidth="231.0" promptText="At least 4 character" />
+            <TextField fx:id="signup_email" layoutX="69.0" layoutY="149.0" prefHeight="25.0" prefWidth="231.0" promptText="Email" />
+            <Button fx:id="login" layoutX="127.0" layoutY="318.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="89.0" stylesheets="@desing.css" text="Sign Up -&gt;" textFill="#050404">
+               <font>
+                  <Font name="Monospaced Bold" size="12.0" />
+               </font>
+            </Button>
+            <Line endX="100.0" layoutX="40.0" layoutY="370.0" opacity="0.47" startX="-20.569984436035156" />
+            <Line endX="143.69668579101562" layoutX="195.0" layoutY="370.0" opacity="0.47" startX="25.133331298828125" />
+            <Label layoutX="140.0" layoutY="362.0" prefHeight="17.0" prefWidth="74.0" text=" Sign Up With" />
+            <Hyperlink fx:id="singUp_link" layoutX="200.0" layoutY="432.0" text="Login">
+               <font>
+                  <Font name="Monospaced Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="103.0" layoutY="436.0" text="Have an Account? ">
+               <font>
+                  <Font name="Monospaced Regular" size="10.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="176.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LOGOS/transport.png" />
+               </image>
+               <effect>
+                  <GaussianBlur radius="1.5" />
+               </effect>
+            </ImageView>
+            <Label fx:id="copyright" layoutX="73.0" layoutY="491.0" prefHeight="31.0" prefWidth="221.0" stylesheets="@desing.css" text="COPYRIGHT(C); All Rights Reserved ">
+               <font>
+                  <Font name="Monospaced Regular" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="207.0" layoutY="64.0" prefHeight="31.0" prefWidth="132.0" text="Rent your garadge ">
+               <font>
+                  <Font name="Monospaced Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane fx:id="logo_name" layoutX="68.0" layoutY="14.0" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Label fx:id="name" layoutX="49.0" layoutY="10.0" prefHeight="45.0" prefWidth="184.0" text="RENT GAFRADGE">
+                     <font>
+                        <Font name="Curlz MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <CubicCurve controlX1="-16.68929100036621" controlX2="-16.689294815063477" controlY1="20.13336181640625" controlY2="-90.07937622070312" endX="55.037635803222656" endY="-76.93330383300781" fill="#1f93ff00" layoutX="122.0" layoutY="93.0" startX="-97.969970703125" startY="-50.26664733886719" stroke="#0000008c" strokeWidth="5.0" />
+                  <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="150.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LOGOS/vehicle.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="60.0" layoutX="-5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LOGOS/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <QuadCurve controlX="160.06661987304688" controlY="265.20001220703125" endX="35.000030517578125" endY="-87.17840576171875" fill="#0a574438" layoutX="-35.0" layoutY="158.0" startX="35.0" startY="175.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <TextField fx:id="signup_Username" layoutX="69.0" layoutY="187.0" prefHeight="25.0" prefWidth="231.0" promptText="Name" />
+            <Label fx:id="signup_name_text" layoutX="67.0" layoutY="171.0" text="Name" textFill="#0000008a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="210.0" text="Password" textFill="#00000089">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="signup_password" layoutX="68.0" layoutY="226.0" prefHeight="25.0" prefWidth="231.0" promptText="At least 4 character" />
+            <Button fx:id="google_button" layoutX="120.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
+            <Button fx:id="facebook_button" layoutX="160.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
+            <Button fx:id="github_button" layoutX="200.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
+
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

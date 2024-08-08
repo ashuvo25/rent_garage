@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #1f1f1f;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.before_start_image_controller">
+    <!-- Background Image -->
+    <ImageView fx:id="backgroundImageView" fitHeight="500.0" fitWidth="360.0" preserveRatio="true" />
+
+    <!-- Navigation Links -->
+    <Hyperlink fx:id="prevLink" layoutX="16.0" layoutY="16.0" text="Prev" textFill="cyan">
+      <font>
+         <Font name="Monospaced Bold" size="16.0" />
+      </font></Hyperlink>
+    <Hyperlink fx:id="next_image" layoutX="281.0" layoutY="16.0" text="Next" textFill="AQUA">
+      <font>
+         <Font name="Monospaced Bold" size="16.0" />
+      </font></Hyperlink>
+
+    <!-- Content Container -->
+    <VBox alignment="center" layoutX="30.0" layoutY="211.0" prefHeight="285.0" prefWidth="300.0" spacing="16.0">
+        <!-- Title -->
+        <Label fx:id="titleLabel" text="Premium Vehicle Repairs" textFill="white">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <!-- Description -->
+        <Label fx:id="descriptionLabel" maxWidth="300.0" text="We do the best vehicle modifications and repairs and let's you rent out your garage." textFill="white" wrapText="true">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <!-- Get Started Button -->
+        <Button fx:id="singUp_link" style="-fx-background-color: white; -fx-text-fill: black;" text="Get Started">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+    </VBox>
+
+    <!-- Image Indicators -->
+    <HBox alignment="center" layoutX="145.0" layoutY="80.0" spacing="10.0">
+        <Circle fx:id="indicator1" fill="white" radius="5.0" />
+        <Circle fx:id="indicator2" fill="gray" radius="5.0" />
+        <Circle fx:id="indicator3" fill="gray" radius="5.0" />
+        <Circle fx:id="indicator4" fill="gray" radius="5.0" />
+    </HBox>
+</Pane>

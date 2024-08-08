@@ -1,0 +1,121 @@
+#login {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #ff0055, #00ffcc);
+    -fx-text-fill: white;
+    -fx-font-family: "Monospaced Bold";
+    -fx-font-size: 12px;
+    /*-fx-padding: 10 10 10 10;*/
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+#login:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #ff3366, #33ffcc);
+}
+
+#login:pressed {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #cc0044, #00cc99);
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#copyright {
+    -fx-opacity: .7;
+    -fx-animation: fadeInOut 5s infinite;
+}
+
+#right_pane{
+    -fx-background-color: #007bff;
+}
+
+
+#singUp_link{
+
+}#home_screen {
+     -fx-border-radius: 6px;
+     -fx-background-radius: 6px;
+     /*-fx-background-color: #000;*/
+ }
+#search_notification_pane{
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: rgba(213, 213, 213, 0.58);
+}
+#search_box{
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: rgba(255, 255, 255, 0.93);
+    -fx-text-fill: white;
+}
+#search_button,#filter_button,#google_button,#facebook_button,#github_button {
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-radius: 30px;
+}
+#search_button {
+    -fx-background-image: url('LOGOS/search.png');
+     -fx-font-size: 12px;
+}
+#filter_button{
+    -fx-background-image: url('LOGOS/filter.png');
+    -fx-font-size: 10px;
+}
+#google_button{
+    -fx-background-image: url('LOGOS/google.png');
+    -fx-font-size: 10px;
+}
+#facebook_button{
+    -fx-background-image: url('LOGOS/communication.png');
+    -fx-font-size: 10px;
+}
+#github_button{
+    -fx-background-image: url('LOGOS/github.png');
+    -fx-font-size: 10px;
+
+}
+#work_button_pane{
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-background-color: rgb(22, 54, 108);
+}
+
+#home_buttons, #search_btn, #rent_button, #profile_button,#massage {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+}
+
+/* Specific background images for each button */
+#home_buttons {
+    -fx-background-image: url('LOGOS/home.png');
+}
+
+#search_btn {
+    -fx-background-image: url('LOGOS/search.png');
+}
+
+#rent_button {
+    -fx-background-image: url('LOGOS/car-rent.png');
+}
+
+#profile_button {
+    -fx-background-image: url('LOGOS/profile.png');
+}
+#massage {
+    -fx-background-image: url('LOGOS/massage_box.png');
+}
+#home_pages_view{
+    -fx-background-color: rgba(213, 213, 213, 0.58);
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+}
