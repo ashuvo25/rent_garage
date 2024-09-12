@@ -64,7 +64,7 @@ public class log_host {
     private void host() {
         try {
             // Host details loader
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vehiclePositionSelection.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("veichlePositionSelection.fxml"));
 
             Stage stage = new Stage();
             stage.setTitle("Garage Details");

@@ -1,20 +1,20 @@
 #login {
-    -fx-background-color: #1382b0;
-    -fx-text-fill: black;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #ff0055, #00ffcc);
+    -fx-text-fill: white;
     -fx-font-family: "Monospaced Bold";
     -fx-font-size: 12px;
     /*-fx-padding: 10 10 10 10;*/
     -fx-background-radius: 5;
-    -fx-border-radius: 20;
+    -fx-border-radius: 5;
 }
 
-/*#login:hover {
+#login:hover {
     -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #ff3366, #33ffcc);
 }
 
 #login:pressed {
     -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #cc0044, #00cc99);
-}*/
+}
 @keyframes fadeInOut {
     0% { opacity: 0; }
     50% { opacity: 1; }
@@ -27,7 +27,7 @@
 }
 
 #right_pane{
-    -fx-background-color: #0000;
+    -fx-background-color: #007bff;
 }
 
 
@@ -82,7 +82,7 @@
 #work_button_pane{
     -fx-border-radius: 30px;
     -fx-background-radius: 30px;
-    -fx-background-color: #FFF;
+    -fx-background-color: rgb(22, 54, 108);
 }
 
 #home_buttons, #search_btn, #rent_button, #profile_button,#massage {
@@ -120,20 +120,8 @@
     -fx-border-radius: 7px;
     -fx-background-radius: 7px;
 }
-/* CSS for Sign In Label */
- #sign_in_label {
-                -fx-font-size: 20px;
-               -fx-font-family: Arial;
-              -fx-text-fill: #333;
-               -fx-background-color: #7bd0e3;
-               -fx-padding: 10 20;
-               -fx-border-radius: 3;
-               -fx-background-radius: 100;
-               -fx-effect: drop shadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 2);
- }
- #YELLOW_CAR {
- -fx-rotate: 180;
- }
+
+
 
 /*   un Wanted   */
 
@@ -295,29 +283,4 @@ AnchorPane {
         -fx-border-radius: 50%;
         -fx-border-width: 2px;
         -fx-border-color: black;
-}
-
-#image_box{
-    -fx-background-image: url('Photos/logo_r.png');
-    -fx-background-size: cover;
-    -fx-background-position: center;
-    -fx-background-radius: 50%;
-    -fx-border-radius: 50%;
-    -fx-clip-shape: "circle";
-}
-.camera_icon{
-    -fx-background-image: url('Icons/camera-52.png');
-}
-#roundButton {
-    -fx-background-image: url('Photos/Map.jpg'); /* Path to your image */
-    -fx-background-radius: 50%;                          /* Makes the button circular */
-    -fx-background-size: cover;                          /* Makes the image cover the entire button */
-    -fx-background-position: center;                     /* Centers the image */
-    -fx-border-radius: 50%;                              /* Ensures border is round */
-    -fx-min-width: 100px;                                /* Sets the minimum width */
-    -fx-min-height: 100px;                               /* Sets the minimum height */
-    -fx-max-width: 100px;                                /* Sets the maximum width */
-    -fx-max-height: 100px;                               /* Sets the maximum height */
-    -fx-border-color: transparent;                       /* Optional: remove button border */
-    -fx-padding: 0;                                      /* Ensures no extra padding */
 }
