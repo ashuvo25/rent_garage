@@ -33,7 +33,8 @@
 
 #singUp_link{
 
-}#home_screen {
+}
+#home_screen {
      -fx-border-radius: 6px;
      -fx-background-radius: 6px;
      /*-fx-background-color: #000;*/
@@ -118,4 +119,34 @@
     -fx-background-color: rgba(213, 213, 213, 0.58);
     -fx-border-radius: 7px;
     -fx-background-radius: 7px;
+}
+
+
+
+/*   un Wanted   */
+
+.button {
+    -fx-background-color: #F2F2F2;
+    -fx-background-radius: 30;
+    -fx-font-size: 14;
+}
+
+.label {
+    -fx-font-family: 'Arial';
+}
+
+VBox {
+    -fx-padding: 15;
+}
+
+AnchorPane {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);
+}
+
+#bvbox {
+    -fx-background-image: url('Photos/bc.jpg');
+
 }
