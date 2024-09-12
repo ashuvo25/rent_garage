@@ -94,7 +94,7 @@ public class before_start_image_controller {
     }
     private void get_start_button() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("become.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Login");
             stage.setScene(new Scene(fxmlLoader.load()));
