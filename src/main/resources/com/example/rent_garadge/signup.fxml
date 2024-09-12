@@ -120,6 +120,10 @@
             <Button fx:id="google_button" layoutX="120.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
             <Button fx:id="facebook_button" layoutX="160.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
             <Button fx:id="github_button" layoutX="200.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
+            <Label fx:id="email_error_notificatiobn" alignment="CENTER_RIGHT" layoutX="151.0" layoutY="167.0" prefHeight="27.0" prefWidth="149.0" text="Invalid email format" textAlignment="RIGHT" textFill="#ff0000cc" textOverrun="CLIP" visible="false" />
+            <Label fx:id="username_notificatiobn" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="205.0" prefHeight="27.0" prefWidth="171.0" text="Username cannot be empty" textAlignment="RIGHT" textFill="#ff0000cc" textOverrun="CLIP" visible="false" />
+            <Label fx:id="conf_pass_notificatiobn" alignment="CENTER_RIGHT" layoutX="118.0" layoutY="285.0" prefHeight="27.0" prefWidth="180.0" text="Passwords do not match" textAlignment="RIGHT" textFill="#ff0000cc" textOverrun="CLIP" visible="false" />
+            <Label fx:id="pass_notificatiobn" alignment="CENTER_RIGHT" layoutX="142.0" layoutY="244.0" prefHeight="27.0" prefWidth="159.0" text="At least 4 characters long" textAlignment="RIGHT" textFill="#ff0000cc" textOverrun="CLIP" visible="false" />
 
          </children>
       </Pane>

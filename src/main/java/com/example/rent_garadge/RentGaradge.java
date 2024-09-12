@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class RentGaradge extends Application {
     @Override
@@ -16,6 +17,7 @@ public class RentGaradge extends Application {
 
 
         stage.setTitle("RENT GARADGE!");
+
         stage.setScene(scene);
         stage.show();
     }
