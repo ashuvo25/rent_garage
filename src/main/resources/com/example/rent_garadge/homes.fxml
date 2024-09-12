@@ -3,27 +3,20 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.webController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.home_controller">
    <children>
       <Pane layoutY="23.0" prefHeight="59.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;">
          <children>
-            <TextField layoutX="26.0" layoutY="14.0" prefHeight="32.0" prefWidth="199.0" styleClass="se_box" />
-            <Button layoutX="196.0" layoutY="19.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="29.0" style="-fx-background-color: #fdfeff;" styleClass="se_butt" />
-            <Button layoutX="231.0" layoutY="20.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="27.0" styleClass="filter" />
-            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="286.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" styleClass="prof_image">
-               <image>
-                  <Image url="@Photos/rent.png" />
-               </image>
-            </ImageView>
+            <TextField layoutX="26.0" layoutY="14.0" prefHeight="39.0" prefWidth="278.0" styleClass="se_box" />
+            <Button layoutX="263.0" layoutY="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="29.0" style="-fx-background-color: #fdfeff;" styleClass="se_butt" />
+            <Button layoutX="318.0" layoutY="16.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="27.0" styleClass="filter" />
          </children>
       </Pane>
-      <Label layoutX="10.0" layoutY="78.0" prefHeight="27.0" prefWidth="30.0" style="-fx-background-color: #fdfeff;" text="Map">
+      <Label layoutX="10.0" layoutY="78.0" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #fdfeff;" text="Active Garages:">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -32,9 +25,9 @@
          <children>
             <Button fx:id="home_btn" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" styleClass="home_btn" stylesheets="@desing.css" text="" />
             <Button fx:id="home_btn1" layoutX="78.0" layoutY="14.0" mnemonicParsing="false" styleClass="map_btn" stylesheets="@desing.css" text="" />
-            <Button fx:id="home_btn2" layoutX="259.0" layoutY="15.0" mnemonicParsing="false" styleClass="noti_btn" text="" />
-            <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" styleClass="rnt_btn" text="Button" />
-            <Button layoutX="203.0" layoutY="15.0" mnemonicParsing="false" styleClass="frn_btn" text="Button" />
+            <Button fx:id="home_btn4" layoutX="259.0" layoutY="15.0" mnemonicParsing="false" styleClass="noti_btn" text="" />
+            <Button fx:id="home_btn2" layoutX="140.0" layoutY="14.0" mnemonicParsing="false" styleClass="rnt_btn" text="Button" />
+            <Button fx:id="home_btn3" layoutX="203.0" layoutY="15.0" mnemonicParsing="false" styleClass="frn_btn" text="Button" />
          </children>
       </Pane>
       <Pane layoutY="105.0" prefHeight="268.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;">

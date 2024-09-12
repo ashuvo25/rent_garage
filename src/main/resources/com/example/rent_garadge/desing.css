@@ -1,20 +1,20 @@
 #login {
-    -fx-background-color: #1382b0;
-    -fx-text-fill: black;
+    -fx-background-color:#2e133a ;
+    -fx-text-fill: white;
     -fx-font-family: "Monospaced Bold";
     -fx-font-size: 12px;
     /*-fx-padding: 10 10 10 10;*/
     -fx-background-radius: 5;
-    -fx-border-radius: 20;
+    -fx-border-radius: 5;
 }
 
-/*#login:hover {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #ff3366, #33ffcc);
+#login:hover {
+    -fx-background-color: #2e133a;
 }
 
 #login:pressed {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #cc0044, #00cc99);
-}*/
+    -fx-background-color: #2e133a;
+}
 @keyframes fadeInOut {
     0% { opacity: 0; }
     50% { opacity: 1; }
@@ -27,7 +27,7 @@
 }
 
 #right_pane{
-    -fx-background-color: #0000;
+    -fx-background-color: #007bff;
 }
 
 
@@ -82,7 +82,7 @@
 #work_button_pane{
     -fx-border-radius: 30px;
     -fx-background-radius: 30px;
-    -fx-background-color: #FFF;
+    -fx-background-color: rgb(22, 54, 108);
 }
 
 #home_buttons, #search_btn, #rent_button, #profile_button,#massage {
@@ -120,20 +120,8 @@
     -fx-border-radius: 7px;
     -fx-background-radius: 7px;
 }
-/* CSS for Sign In Label */
- #sign_in_label {
-                -fx-font-size: 20px;
-               -fx-font-family: Arial;
-              -fx-text-fill: #333;
-               -fx-background-color: #7bd0e3;
-               -fx-padding: 10 20;
-               -fx-border-radius: 3;
-               -fx-background-radius: 100;
-               -fx-effect: drop shadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 2);
- }
- #YELLOW_CAR {
- -fx-rotate: 180;
- }
+
+
 
 /*   un Wanted   */
 
@@ -173,7 +161,7 @@ AnchorPane {
 }
 
 /* Styles for the Buttons */
-.home_btn,.frn_btn , .setting_btn,.rnt_btn,.noti_btn,.map_btn {
+.home_btn,.frn_btn , .setting_btn,.rnt_btn,.noti_btn,.map_btn,.prof_coments ,.pfor_profile,.prof_history{
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -186,14 +174,14 @@ AnchorPane {
     -fx-background-image: url('Icons/home-32.png');
 }.map_btn {
     -fx-background-image: url('Icons/map-32.png');
-}.noti_btn {
+}.frn_btn {
     -fx-background-image: url('Icons/notification-32.png');
 }
 .rnt_btn {
     -fx-background-image: url('Icons/garage-32.png');
 }
-.frn_btn {
-    -fx-background-image: url('Icons/collaboration-50.png');
+.noti_btn  {
+    -fx-background-image: url('Icons/user-32.png');
 }
 
  .cell1,.cell2,.cell3,.cell4 {
@@ -227,6 +215,9 @@ AnchorPane {
     -fx-background-image: url('Icons/money-64.png');
 }.eb4{
     -fx-background-image: url('Icons/history64.png');
+}#back_home{
+    -fx-background-image: url('Icons/arrow-50.png');
+
 }
  .epn1,.epn2,.epn3,.epn4{
      -fx-border-color: #111;
@@ -297,27 +288,113 @@ AnchorPane {
         -fx-border-color: black;
 }
 
-#image_box{
-    -fx-background-image: url('Photos/logo_r.png');
+
+#prof_details {
+    -fx-background-color: white;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    /*-fx-border-color: black;*/
+    -fx-border-width: 1px;
+}
+#back_home{
+
+    -fx-background-image: url('Icons/back-32.png');
+}
+
+
+#back_home,#threeDot ,.back_button{
     -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
     -fx-background-position: center;
-    -fx-background-radius: 50%;
-    -fx-border-radius: 50%;
-    -fx-clip-shape: "circle";
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-border-radius: 10px;
 }
-.camera_icon{
-    -fx-background-image: url('Icons/camera-52.png');
+#threeDot{
+    -fx-background-image: url('Icons/menu-vertical-32.png');
 }
-#roundButton {
-    -fx-background-image: url('Photos/Map.jpg'); /* Path to your image */
-    -fx-background-radius: 50%;                          /* Makes the button circular */
-    -fx-background-size: cover;                          /* Makes the image cover the entire button */
-    -fx-background-position: center;                     /* Centers the image */
-    -fx-border-radius: 50%;                              /* Ensures border is round */
-    -fx-min-width: 100px;                                /* Sets the minimum width */
-    -fx-min-height: 100px;                               /* Sets the minimum height */
-    -fx-max-width: 100px;                                /* Sets the maximum width */
-    -fx-max-height: 100px;                               /* Sets the maximum height */
-    -fx-border-color: transparent;                       /* Optional: remove button border */
-    -fx-padding: 0;                                      /* Ensures no extra padding */
+#prof_edit,#prof_edit1,#prof_edit2,#prof_edit3,#prof_edit4 {
+    -fx-text-fill: rgba(0, 0, 0, 0.5);
+}
+.details-pane {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 3, 0.5, 1.2, 1.2);
+}
+.manu_pane_home{
+    -fx-background-color: #2e133a;
+    -fx-background-radius: 10px;
+
+}
+.prof_coments {
+    -fx-background-image: url('Icons/quote-32.png');
+}.pfor_profile {
+     -fx-background-image: url('Icons/user-32.png');
+ }.prof_history{
+       -fx-background-image: url('Icons/history-32.png');
+   }
+.prof_coments:pressed, .prof_history:pressed, .pfor_profile:pressed ,.home_btn:pressed,.frn_btn:pressed , .setting_btn:pressed,.rnt_btn:pressed,.noti_btn:pressed,.map_btn:pressed {
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-pref-width: 42px;
+    -fx-pref-height: 42px;
+}
+
+
+#hom_user ,#hom_host ,#hom_log{
+    -fx-background-color: linear-gradient(#34d058, #0f3057);
+
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Arial Bold';
+
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #007aff;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 2, 2);
+    -fx-padding: 10;
+    -fx-cursor: hand;
+}
+#hom_log{
+    -fx-pref-height: 40px;
+    -fx-pref-width: 190px;
+}
+#hom_host{
+    -fx-pref-height: 40px;
+    -fx-pref-width: 140px;
+}
+#hom_user{
+    -fx-pref-height: 40px;
+    -fx-pref-width: 140px;
+}
+#hom_user:hover {
+    -fx-background-color: linear-gradient(#28a745, #218838);
+}
+
+#hom_user:pressed {
+    -fx-background-color: linear-gradient(#218838, #1e7e34);
+}
+
+
+
+#hom_host:hover {
+    -fx-background-color: linear-gradient(#d68910, #ca6f1e);
+}
+
+#hom_host:pressed {
+    -fx-background-color: linear-gradient(#ca6f1e, #af601a);
+}
+
+
+
+#hom_log:hover {
+    -fx-background-color: linear-gradient(#c0392b, #a93226);
+}
+
+#hom_log:pressed {
+    -fx-background-color: linear-gradient(#a93226, #922b21);
+}
+
+#history_pane,#history_pane1,#history_pane2{
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
 }

@@ -66,12 +66,8 @@ public class signup_controller {
     private Label email_error_notificatiobn, username_notificatiobn, conf_pass_notificatiobn, pass_notificatiobn;
 
     @FXML
-
     public void initialize() {
         singUp_link.setOnAction(event -> openSignupWindow());
-
-
-
 
         login.setOnAction(event -> {
             String username = signup_Username.getText();
@@ -93,10 +89,10 @@ public class signup_controller {
                 // Call the datainput method to store the data
                 String isDataStored = FirebaseConfig.datainput("users", email, userData);
 
-                if (isDataStored=="signup") {
+                if (isDataStored.equals("signup")) {
                     // If successful, open the signup window or display a success message
                     openSignupWindow();
-                } else if(isDataStored=="duplicate"){
+                } else if(isDataStored.equals("duplicate")) {
                     email_error_notificatiobn.setText("Email Already Registered");
                     email_error_notificatiobn.setVisible(true);
                 }
@@ -108,31 +104,36 @@ public class signup_controller {
         boolean isValid = true;
 
         if (username.isEmpty()) {
+            username_notificatiobn.setText("Username cannot be empty.");
             username_notificatiobn.setVisible(true);
             isValid = false;
         }
 
+        // Check email format
         if (email.isEmpty()) {
-            email_error_notificatiobn.setText("Email cannot be empty.");
+            email_error_notificatiobn.setText("Email cannot be empty");
             email_error_notificatiobn.setVisible(true);
             isValid = false;
-        } else if (!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
-            email_error_notificatiobn.setText("Invalid email format.");
+        } else if (!email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
+            email_error_notificatiobn.setText("Invalid email format");
             email_error_notificatiobn.setVisible(true);
             isValid = false;
         }
 
+        // Password validation
         if (password.isEmpty()) {
             pass_notificatiobn.setText("Password cannot be empty.");
             pass_notificatiobn.setVisible(true);
             isValid = false;
         } else if (password.length() < 4) {
-            pass_notificatiobn.setText("At least 4 characters long.");
+            pass_notificatiobn.setText("Password must be at least 4 characters long.");
             pass_notificatiobn.setVisible(true);
             isValid = false;
         }
 
+        // Confirm password validation
         if (!password.equals(confirmPassword)) {
+            conf_pass_notificatiobn.setText("Passwords do not match.");
             conf_pass_notificatiobn.setVisible(true);
             isValid = false;
         }
@@ -150,7 +151,7 @@ public class signup_controller {
 
     private void openSignupWindow() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("loginPage.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Login");
             stage.setScene(new Scene(fxmlLoader.load()));

@@ -1,11 +1,16 @@
 package com.example.rent_garadge;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class home_controller {
 
@@ -20,6 +25,12 @@ public class home_controller {
 
     @FXML
     private Button home_btn2;
+
+    @FXML
+    private Button home_btn3;
+
+    @FXML
+    private Button home_btn4;
 
     @FXML
     private Pane home_options;
@@ -44,38 +55,37 @@ public class home_controller {
     private Pane hover_pane;
 
     public void initialize() {
-        // Setup hover effects for the epn panes
-        setupHoverEffect(epn1, "Garage", "#ffcccc");
-        setupHoverEffect(epn2, "Notifications", "#ccffcc");
-        setupHoverEffect(epn3, "Payments", "#ccccff");
-        setupHoverEffect(epn4, "History", "#ffe28a");
+
+          home_btn4.setOnAction(event -> profileFunct());
+//          hideHoverPane();
     }
 
-    private void setupHoverEffect(Pane pane, String labelText, String color) {
-        // On mouse enter, show tooltip pane and change pane color
-        pane.setOnMouseEntered(event -> {
-            showHoverPane(pane, labelText, color);
-            pane.setStyle("-fx-background-color: " + color + ";"); // Change pane color on hover
-        });
+    private void profileFunct() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("profilepage.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Profile");
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+            Stage currentStage = (Stage) home_btn4.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
 
-        // On mouse exit, hide tooltip pane and revert pane color
-        pane.setOnMouseExited(event -> {
-            hideHoverPane();
-            pane.setStyle("-fx-background-color: transparent;"); // Revert color on exit
-        });
+        }
     }
 
-    private void showHoverPane(Pane pane, String labelText, String color) {
-        hover_pane.setVisible(true);
-        hover_pane.setLayoutX(pane.getLayoutX() + 60); // Adjust the tooltip pane's X position
-        hover_pane.setLayoutY(pane.getLayoutY());
-        hover_pane.setStyle("-fx-background-color: #ffffff; -fx-border-color: " + color + ";");
-        change_users.setText(labelText); // Set the text of the hover pane
-    }
+//    private void showHoverPane(Pane pane, String labelText, String color) {
+//        hover_pane.setVisible(true);
+//        hover_pane.setLayoutX(pane.getLayoutX() + 60);
+//        hover_pane.setLayoutY(pane.getLayoutY());
+//        hover_pane.setStyle("-fx-background-color: #ffffff; -fx-border-color: " + color + ";");
+//        change_users.setText(labelText);
+//    }
 
-    private void hideHoverPane() {
-        hover_pane.setVisible(false); // Hide the tooltip when not hovering
-    }
+//    private void hideHoverPane() {
+//        hover_pane.setVisible(false); // Hide the tooltip when not hovering
+//    }
 
 
 

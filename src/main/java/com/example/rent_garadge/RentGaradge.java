@@ -16,7 +16,7 @@ public class RentGaradge extends Application {
 //
 //        stage.initStyle(StageStyle.UNDECORATED);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(RentGaradge.class.getResource("prev_imgs.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(RentGaradge.class.getResource("become.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 360, 500);
 
 //        FirebaseConfig.data();
