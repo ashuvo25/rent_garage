@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="520.0" prefWidth="360.0" style="-fx-background-color: #ecfefa;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.Login_controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="520.0" prefWidth="360.0" style="-fx-background-color: #ecfefa;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.Host_details_controll">
    <top>
       <TextFlow BorderPane.alignment="CENTER" />
    </top>
@@ -45,7 +45,7 @@
             </Text>
             <AnchorPane layoutX="39.0" layoutY="195.0" opacity="0.53" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #47ffd0; -fx-background-insets: 3; -fx-border-color: #000000; -fx-border-radius: 20; -fx-background-radius: 20;">
                <children>
-                  <CheckBox layoutX="16.0" layoutY="-1.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="95.0" text="Outdoor" wrapText="true">
+                  <CheckBox fx:id="outdoor_id" layoutX="16.0" layoutY="-1.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="95.0" text="Outdoor" wrapText="true">
                      <font>
                         <Font name="Calibri Bold" size="17.0" />
                      </font>
@@ -54,7 +54,7 @@
             </AnchorPane>
             <AnchorPane layoutX="185.0" layoutY="195.0" opacity="0.53" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #47ffd0; -fx-background-insets: 3; -fx-border-style: solid; -fx-border-radius: 20; -fx-border-color: #000000; -fx-background-radius: 20;">
                <children>
-                  <CheckBox layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Indoor" wrapText="true">
+                  <CheckBox fx:id="indor_id" layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Indoor" wrapText="true">
                      <font>
                         <Font name="Calibri Bold" size="17.0" />
                      </font>
@@ -68,7 +68,7 @@
             </Text>
             <AnchorPane layoutX="32.0" layoutY="320.0" opacity="0.53" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #47ffd0; -fx-background-insets: 3; -fx-border-style: solid; -fx-border-radius: 20; -fx-border-color: #000000; -fx-background-radius: 20;">
                <children>
-                  <CheckBox layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Car" wrapText="true">
+                  <CheckBox fx:id="car_id" layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Car" wrapText="true">
                      <font>
                         <Font name="Calibri Bold" size="17.0" />
                      </font>
@@ -77,14 +77,14 @@
             </AnchorPane>
             <AnchorPane layoutX="186.0" layoutY="320.0" opacity="0.53" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #47ffd0; -fx-background-insets: 3; -fx-border-style: solid; -fx-border-radius: 20; -fx-border-color: #000000; -fx-background-radius: 20;">
                <children>
-                  <CheckBox layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Bike" wrapText="true">
+                  <CheckBox fx:id="bike_id" layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Bike" wrapText="true">
                      <font>
                         <Font name="Calibri Bold" size="17.0" />
                      </font>
                   </CheckBox>
                </children>
             </AnchorPane>
-            <Button layoutX="143.0" layoutY="414.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #47ffd0; -fx-padding: 5px; -fx-border-color: darkblue; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10; -fx-background-insets: 3;" text="Next">
+            <Button fx:id="next_0" layoutX="143.0" layoutY="414.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #47ffd0; -fx-padding: 5px; -fx-border-color: darkblue; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10; -fx-background-insets: 3;" text="Next">
                <font>
                   <Font size="14.0" />
                </font>

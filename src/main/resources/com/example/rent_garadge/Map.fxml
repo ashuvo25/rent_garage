@@ -7,8 +7,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="576.0" prefWidth="415.0" style="-fx-background-color: #e7fff9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nothing">
+<AnchorPane prefHeight="576.0" prefWidth="415.0" style="-fx-background-color: #e7fff9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.map_controller">
     <children>
         <BorderPane prefHeight="70.0" prefWidth="415.0" style="-fx-background-color: #005942;">
             <center>
@@ -19,18 +20,7 @@
                 </Text>
             </center>
         </BorderPane>
-        <Text layoutX="18.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your location" wrappingWidth="236.63671875">
-            <font>
-                <Font name="Britannic Bold" size="20.0" />
-            </font>
-        </Text>
-        <Button layoutX="187.0" layoutY="493.0" mnemonicParsing="false" text="Next" />
-      <Button fx:id="roundButton" layoutX="116.0" layoutY="185.0" mnemonicParsing="false" prefHeight="184.0" prefWidth="191.0" style="-fx-border-radius: 100; -fx-background-radius: 1000; -fx-background-color: #fff;" text="Button" />
-      <ImageView fitHeight="79.0" fitWidth="156.0" layoutX="137.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Photos/blue-curved-world-map-contours-260nw-2393768071.jpg" />
-         </image>
-      </ImageView>
-      <Button layoutX="89.0" layoutY="392.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="237.0" text="Location" />
+        <WebView fx:id="mapView" layoutX="10.0" layoutY="100.0" prefWidth="395.0" prefHeight="400.0" />
     </children>
 </AnchorPane>
+

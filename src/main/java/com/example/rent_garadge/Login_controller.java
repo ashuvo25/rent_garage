@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Map;
 
 public class Login_controller {
 
@@ -44,12 +45,20 @@ public class Login_controller {
             String email = input_email.getText();
             String password = input_password.getText();
 
-            if (validateLogin(email, password)) {
+            String emailpass=FirebaseConfig.verifyEmailAndPassword("users",email,password);
+
+
+            if (emailpass=="signin") {
                 // Simulate login success by opening the home window
                 openHomeWindow();
-            } else {
-                invalid.setText("Invalid email or password");
-                invalid.setVisible(true);
+            } else if(emailpass=="incorrect_pass") {
+                password_notification.setText("Incorrect password");
+                password_notification.setVisible(true);
+            } else if (emailpass=="no_email") {
+                email_notification.setText("Incorrect email");
+                email_notification.setVisible(true);
+            }else{
+                System.out.println(emailpass);
             }
         });
     }
@@ -60,6 +69,7 @@ public class Login_controller {
         // Reset visibility of error labels
         email_notification.setVisible(false);
         password_notification.setVisible(false);
+
 
         if (email.isEmpty()) {
             email_notification.setText("Email cannot be empty");
@@ -102,7 +112,7 @@ public class Login_controller {
     @FXML
     private void openHomeWindow() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Rent Garage");
             stage.setScene(new Scene(fxmlLoader.load()));
