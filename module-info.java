@@ -3,6 +3,9 @@ module com.example.rent_garadge {
     requires javafx.fxml;
 
     requires com.dlsc.formsfx;
+    requires org.mongodb.driver.sync.client;
+    requires org.mongodb.bson;
+    requires org.mongodb.driver.core;
 
     requires java.desktop;
     requires com.google.api.apicommon;
