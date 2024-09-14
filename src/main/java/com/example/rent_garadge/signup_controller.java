@@ -97,7 +97,7 @@ public class signup_controller {
             // Validate user input and show notification if there's an issue
             if (validateInputs(username, email, password, confirmPassword)) {
                 storeUserInDatabase(username, email, password);
-                showAlert("Success", "User registered successfully!", AlertType.INFORMATION);
+//                showAlert("Success", "User registered successfully!", AlertType.INFORMATION);
             }
         });
     }
@@ -155,16 +155,24 @@ public class signup_controller {
     }
 
     private void storeUserInDatabase(String username, String email, String password) {
-        try {
-            Document newUser = new Document("username", username)
-                    .append("email", email)
-                    .append("password", password);
-            collection.insertOne(newUser);
-            System.out.println("User registered successfully!");
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (isEmailRegistered(email)) {
+            email_error_notificatiobn.setText("Email is already registered.");
+            email_error_notificatiobn.setVisible(true);
+        } else {
+            try {
+                Document newUser = new Document("username", username)
+                        .append("email", email)
+                        .append("password", password);
+                collection.insertOne(newUser);
+                openSignupWindow();
+//                showAlert("Success", "User registered successfully!", AlertType.INFORMATION);
+            } catch (Exception e) {
+                e.printStackTrace();
+                showAlert("Error", "Failed to register user. Please try again.", AlertType.ERROR);
+            }
         }
     }
+
 
     private void openSignupWindow() {
         try {
@@ -179,4 +187,9 @@ public class signup_controller {
             e.printStackTrace();
         }
     }
+    private boolean isEmailRegistered(String email) {
+        Document existingUser = collection.find(new Document("email", email)).first();
+        return existingUser != null; // Returns true if the email is already registered
+    }
+
 }
