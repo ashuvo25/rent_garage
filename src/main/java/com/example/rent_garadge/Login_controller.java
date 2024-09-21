@@ -74,28 +74,22 @@ public class Login_controller {
             e.printStackTrace();
 
         }
-    }
-//   @FXML
-//    public void initialize() {
-//       singUp_link.setOnAction(event -> openSignupWindow());
-//    }
-
-
-    @FXML
-    private void openHomeWindow() {
+    }    private void openHomeWindow() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Rent GaraDge");
+            stage.setTitle("Sign Up");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
-            Stage currentStage = (Stage) singUp_link.getScene().getWindow();
+            Stage currentStage = (Stage) login.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
 
         }
     }
+
+
     @FXML
     public void initialize() {
         singUp_link.setOnAction(event -> openSignupWindow());
