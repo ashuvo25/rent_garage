@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.webController">
+   <children>
+      <Pane layoutY="23.0" prefHeight="59.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;">
+         <children>
+            <TextField layoutX="26.0" layoutY="14.0" prefHeight="32.0" prefWidth="199.0" styleClass="se_box" />
+            <Button layoutX="196.0" layoutY="19.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="29.0" style="-fx-background-color: #fdfeff;" styleClass="se_butt" />
+            <Button layoutX="231.0" layoutY="20.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="27.0" styleClass="filter" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="286.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" styleClass="prof_image">
+               <image>
+                  <Image url="@Photos/logo%20r.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="10.0" layoutY="78.0" prefHeight="27.0" prefWidth="30.0" style="-fx-background-color: #fdfeff;" text="Map">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane fx:id="nav_bar" layoutX="25.0" layoutY="427.0" prefHeight="59.0" prefWidth="309.0" styleClass="nav_bar" stylesheets="@desing.css">
+         <children>
+            <Button fx:id="home_btn" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" styleClass="home_btn" stylesheets="@desing.css" text="" />
+            <Button fx:id="home_btn1" layoutX="78.0" layoutY="14.0" mnemonicParsing="false" styleClass="map_btn" stylesheets="@desing.css" text="" />
+            <Button fx:id="home_btn2" layoutX="259.0" layoutY="15.0" mnemonicParsing="false" styleClass="noti_btn" text="" />
+            <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" styleClass="rnt_btn" text="Button" />
+            <Button layoutX="203.0" layoutY="15.0" mnemonicParsing="false" styleClass="frn_btn" text="Button" />
+         </children>
+      </Pane>
+      <Pane layoutY="98.0" prefHeight="322.0" prefWidth="360.0">
+         <children>
+            <ImageView fitHeight="299.0" fitWidth="348.0" layoutX="6.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" styleClass="map_view">
+               <image>
+                  <Image url="@Photos/map.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ParkMyGarage" wrappingWidth="217.33673095703125">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

@@ -48,6 +48,17 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>rent_garadge</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- JavaFX dependencies -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>17.0.2</version> <!-- For WebView -->
+        </dependency>
     </dependencies>
 
     <build>

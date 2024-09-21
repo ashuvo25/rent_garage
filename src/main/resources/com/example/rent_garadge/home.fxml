@@ -3,61 +3,62 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane fx:id="home_screen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="360.0" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.home_controller">
    <children>
-      <Pane fx:id="search_notification_pane" layoutX="5.0" layoutY="3.0" prefHeight="81.0" prefWidth="350.0" stylesheets="@desing.css">
+      <Pane layoutY="23.0" prefHeight="59.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;">
          <children>
-            <Label layoutX="35.0" layoutY="8.0" text="Rental Garadges" textFill="#000000d0">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="305.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@LOGOS/notification.png" />
-               </image>
-            </ImageView>
-            <TextField fx:id="search_box" layoutX="25.0" layoutY="44.0" prefHeight="25.0" prefWidth="243.0" promptText="      search" stylesheets="@desing.css" />
-            <Button fx:id="search_button" layoutX="240.0" layoutY="45.0" mnemonicParsing="false" prefHeight="2.0" prefWidth="22.0" />
-            <Button fx:id="filter_button" layoutX="306.0" layoutY="46.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="17.0" text="Button" />
+            <Circle fill="DODGERBLUE" layoutX="315.0" layoutY="30.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <TextField layoutX="26.0" layoutY="14.0" prefHeight="32.0" prefWidth="199.0" styleClass="se_box" />
+            <Button layoutX="196.0" layoutY="19.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="29.0" style="-fx-background-color: #fdfeff;" styleClass="se_butt" />
+            <Button layoutX="231.0" layoutY="20.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="27.0" styleClass="filter" />
          </children>
       </Pane>
-      <Line endX="271.0000305175781" endY="7.62939453125E-6" layoutX="89.0" layoutY="88.0" opacity="0.49" startX="-89.0" startY="7.62939453125E-6" stroke="#0000004a">
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.16842105984687805" green="0.12413255125284195" blue="0.12413255125284195" opacity="0.8199999928474426" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-      </Line>
-      <Pane fx:id="work_button_pane" layoutX="5.0" layoutY="460.0" prefHeight="50.0" prefWidth="350.0" stylesheets="@desing.css">
+      <Label layoutX="10.0" layoutY="78.0" prefHeight="27.0" prefWidth="50.0" style="-fx-background-color: #fdfeff;" text="Menus">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane layoutY="105.0" prefHeight="268.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;">
          <children>
-            <Button fx:id="home_buttons" layoutX="39.0" layoutY="12.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@desing.css" />
-            <Button fx:id="rent_button" layoutX="97.0" layoutY="12.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@desing.css" />
-            <Button fx:id="search_btn" layoutX="157.0" layoutY="12.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@desing.css" />
-            <Button fx:id="massage" layoutX="217.0" layoutY="12.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@desing.css" />
-            <Button fx:id="profile_button" layoutX="277.0" layoutY="12.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@desing.css" />
+            <Pane layoutX="26.0" prefHeight="285.0" prefWidth="309.0">
+               <children>
+                  <Pane layoutY="10.0" prefHeight="102.0" prefWidth="134.0" styleClass="cell1" stylesheets="@desing.css">
+                     <children>
+                        <Text layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Instant Booking" wrappingWidth="135.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="104.0" layoutY="88.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="29.0" styleClass="arrow_btn" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="174.0" layoutY="10.0" prefHeight="102.0" prefWidth="113.0" styleClass="cell2" />
+                  <Pane layoutY="140.0" prefHeight="102.0" prefWidth="148.0" styleClass="cell3" />
+                  <Pane layoutX="174.0" layoutY="140.0" prefHeight="102.0" prefWidth="113.0" styleClass="cell4" />
+               </children>
+            </Pane>
+
+
          </children>
       </Pane>
-      <Pane fx:id="home_pages_view" layoutX="4.0" layoutY="92.0" prefHeight="362.0" prefWidth="353.0" />
+      <Pane fx:id="nav_bar" layoutX="25.0" layoutY="427.0" prefHeight="59.0" prefWidth="309.0" styleClass="nav_bar" stylesheets="@desing.css">
+         <children>
+            <Button fx:id="home_btn" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" styleClass="home_btn" stylesheets="@desing.css" text="" />
+            <Button fx:id="home_btn1" layoutX="78.0" layoutY="14.0" mnemonicParsing="false" styleClass="map_btn" stylesheets="@desing.css" text="" />
+            <Button fx:id="home_btn2" layoutX="259.0" layoutY="15.0" mnemonicParsing="false" styleClass="noti_btn" text="" />
+            <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" styleClass="rnt_btn" />
+            <Button layoutX="203.0" layoutY="15.0" mnemonicParsing="false" styleClass="frn_btn" />
+         </children>
+      </Pane>
+      <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ParkMyGarage">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

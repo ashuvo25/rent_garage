@@ -126,9 +126,9 @@
 /*   un Wanted   */
 
 .button {
-    -fx-background-color: #F2F2F2;
-    -fx-background-radius: 30;
-    -fx-font-size: 14;
+    /*-fx-background-color: #F2F2F2;*/
+    /*-fx-background-radius: 30;*/
+    -fx-font-size: 13;
 }
 
 .label {
@@ -149,4 +149,138 @@ AnchorPane {
 #bvbox {
     -fx-background-image: url('Photos/bc.jpg');
 
+}
+
+
+/* General Styling */
+
+.nav_bar {
+    -fx-background-color: #2e133a;
+    -fx-background-radius: 10px;
+    /*-fx-border-radius: 2%;*/
+}
+
+/* Styles for the Buttons */
+.home_btn,.frn_btn , .setting_btn,.rnt_btn,.noti_btn,.map_btn {
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #2e133a;
+}
+.home_btn {
+    -fx-background-image: url('Icons/home-32.png');
+}.map_btn {
+    -fx-background-image: url('Icons/map-32.png');
+}.noti_btn {
+    -fx-background-image: url('Icons/notification-32.png');
+}
+.rnt_btn {
+    -fx-background-image: url('Icons/garage-32.png');
+}
+.frn_btn {
+    -fx-background-image: url('Icons/collaboration-50.png');
+}
+
+ .cell1,.cell2,.cell3,.cell4 {
+     -fx-background-radius: 10px;
+     -fx-pref-width: 135px;
+     -fx-pref-height: 120px;
+ }
+ .cell1{
+     -fx-background-color: #e9d7ff;
+ } .cell2{
+     -fx-background-color: #d9eeff;
+ }.cell3{
+     -fx-background-color: #ffe28a;
+ }.cell4{
+     -fx-background-color: #ffd3ce;
+ }
+.eb1,.eb2,.eb3,.eb4{
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 35px;
+    -fx-pref-height: 35px;
+    /*-fx-border-radius: 10px;*/
+    /*-fx-background-color: #2e133a;*/
+}
+.eb1{
+    -fx-background-image: url('Icons/garage-48.png');
+}.eb2{
+    -fx-background-image: url('Icons/notification-50.png');
+}.eb3{
+    -fx-background-image: url('Icons/money-64.png');
+}.eb4{
+    -fx-background-image: url('Icons/history64.png');
+}
+ .epn1,.epn2,.epn3,.epn4{
+     -fx-border-color: #111;
+     -fx-border-width: 2px;
+     -fx-border-radius: 5px;
+     -fx-text-fill: #333333;
+ }
+#hover_pane {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-background-radius: 5px;
+}
+.adding1{
+    -fx-background-image: url('Icons/repairing-64.png');
+}
+.se_butt{
+    -fx-background-image: url('Icons/search-48.png');
+    -fx-background-radius: 30px;
+}
+.filter{
+    -fx-background-image: url('Icons/filter-50.png');
+    -fx-pref-width: 28px;
+    -fx-pref-height: 28px;
+    -fx-background-color: #fdfeff;
+    -fx-background-radius: 5%;
+    -fx-padding: 2;
+    /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2);*/
+    -fx-cursor: hand;
+}
+.filter:hover {
+    -fx-background-color: #2980b9;
+}
+.se_box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 15;
+    -fx-border-width: 1;
+}
+
+.se_box:hover {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #b0b0b0;
+}
+.arrow_btn{
+    -fx-background-image: url('Icons/arrow-48.png');
+    -fx-background-color:  #e9d7ff;
+    -fx-pref-width: 24px;
+    -fx-pref-height: 18px;
+    /*-fx-padding: 10;*/
+}
+.arrow_btn:hover{
+    -fx-border-width: 1;
+}
+.map_view{
+    -fx-background-radius: 5%;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+.prof_image{
+    -fx-background-radius: 10px;
+        -fx-border-radius: 50%;
+        -fx-border-width: 2px;
+        -fx-border-color: black;
 }
