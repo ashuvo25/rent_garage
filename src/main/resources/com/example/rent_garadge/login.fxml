@@ -108,6 +108,13 @@
             <Button fx:id="google_button" layoutX="120.0" layoutY="353.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
             <Button fx:id="facebook_button" layoutX="160.0" layoutY="353.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
             <Button fx:id="github_button" layoutX="200.0" layoutY="353.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
+            <Label fx:id="email_notification" alignment="CENTER_RIGHT" layoutX="130.0" layoutY="192.0" prefHeight="23.0" prefWidth="169.0" text="Email cannot be empty" textFill="RED" />
+            <Label fx:id="password_notification" alignment="CENTER_RIGHT" layoutX="74.0" layoutY="238.0" prefHeight="23.0" prefWidth="224.0" text="Password cannot be empty" textFill="RED" />
+            <Label fx:id="invalid" alignment="CENTER" layoutX="71.0" layoutY="289.0" prefHeight="49.0" prefWidth="196.0" text="Invalid email or password" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </bottom>
