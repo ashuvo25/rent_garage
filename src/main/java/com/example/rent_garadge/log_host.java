@@ -27,6 +27,7 @@ public class log_host{
 
 
         hom_log.setOnAction(event -> loginScreen());
+        hom_user.setOnAction(event -> mapview());
 
 
     }
@@ -38,6 +39,19 @@ public class log_host{
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
             Stage currentStage = (Stage) hom_log.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+    }private void mapview() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("webView.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Login");
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+            Stage currentStage = (Stage) hom_user.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,10 +1,15 @@
 package com.example.rent_garadge;
 
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.bson.Document;
 
 import java.io.IOException;
 
@@ -28,7 +33,22 @@ public class Login_controller {
     @FXML
     private Label password_notification; // The label for password error messages
     @FXML
-    private Label invalid; // The label for invalid login error messages
+    private Label invalid; // The label for password error messages
+
+    private MongoClient mongoClient;
+    private MongoDatabase database;
+    private MongoCollection<Document> collection;
+
+    public Login_controller() {
+        // Initialize MongoDB connection
+        try {
+            mongoClient = MongoClients.create("mongodb://localhost:27017");
+            database = mongoClient.getDatabase("Rent_Garage_Database"); // Your database name
+            collection = database.getCollection("user_data"); // Your collection name
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     public void initialize() {
@@ -43,13 +63,16 @@ public class Login_controller {
         login.setOnAction(event -> {
             String email = input_email.getText();
             String password = input_password.getText();
-            openHomeWindow();
+
             if (validateLogin(email, password)) {
-                // Simulate login success by opening the home window
-                openHomeWindow();
-            } else {
-                invalid.setText("Invalid email or password");
-                invalid.setVisible(true);
+                if (authenticateUser(email, password)) {
+//                    showAlert("Success", "Login successful!", Alert.AlertType.INFORMATION);
+                    openHomeWindow();
+                } else {
+//                    showAlert("Login Failed", "Invalid email or password", Alert.AlertType.ERROR);
+                    invalid.setText("Invalid email or password");
+                    invalid.setVisible(true);
+                }
             }
         });
     }
@@ -82,6 +105,21 @@ public class Login_controller {
         }
 
         return isValid;
+    }
+
+    private boolean authenticateUser(String email, String password) {
+        Document query = new Document("email", email).append("password", password);
+        Document user = collection.find(query).first();
+
+        return user != null; // Return true if user is found, false otherwise
+    }
+
+    private void showAlert(String title, String message, Alert.AlertType alertType) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     @FXML

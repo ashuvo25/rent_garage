@@ -49,33 +49,16 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongodb-driver-sync</artifactId>
-            <version>5.1.4</version>
+            <groupId>com.example</groupId>
+            <artifactId>rent_garadge</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!-- JavaFX dependencies -->
         <dependency>
-            <groupId>com.google.api-client</groupId>
-            <artifactId>google-api-client</artifactId>
-            <version>1.32.1</version>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>17.0.2</version> <!-- For WebView -->
         </dependency>
-        <dependency>
-            <groupId>com.google.oauth-client</groupId>
-            <artifactId>google-oauth-client-jetty</artifactId>
-            <version>1.32.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.apis</groupId>
-            <artifactId>google-api-services-oauth2</artifactId>
-            <version>v2-rev141-1.25.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.apis</groupId>
-            <artifactId>google-api-services-people</artifactId>
-            <version>v1-rev20210903-1.32.1</version>
-        </dependency>
-
-
     </dependencies>
 
     <build>
