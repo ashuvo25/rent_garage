@@ -43,7 +43,7 @@ public class Login_controller {
         login.setOnAction(event -> {
             String email = input_email.getText();
             String password = input_password.getText();
-
+            openHomeWindow();
             if (validateLogin(email, password)) {
                 // Simulate login success by opening the home window
                 openHomeWindow();
