@@ -21,7 +21,7 @@ public class RentGaradge extends Application {
         stage.setScene(scene);
         stage.show();
     }
-// hellooo Adnan
+//gdh
     public static void main(String[] args) {
         launch();
     }
