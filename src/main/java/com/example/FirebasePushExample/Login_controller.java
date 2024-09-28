@@ -1,4 +1,4 @@
-package com.example.rent_garadge;
+package com.example.FirebasePushExample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

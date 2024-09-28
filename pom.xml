@@ -58,7 +58,16 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
             <version>17.0.2</version> <!-- For WebView -->
+
+
         </dependency>
+
+        <dependency>
+            <groupId>com.google.firebase</groupId>
+            <artifactId>firebase-admin</artifactId>
+            <version>9.3.0</version> <!-- Use the latest version -->
+        </dependency>
+
     </dependencies>
 
     <build>

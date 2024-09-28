@@ -1,4 +1,4 @@
-package com.example.rent_garadge;
+package com.example.FirebasePushExample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.scene.control.Alert.AlertType;
 
 import java.io.IOException;
 
