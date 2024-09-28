@@ -1,4 +1,4 @@
-package com.example.FirebasePushExample;
+package com.example.rent_garadge;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

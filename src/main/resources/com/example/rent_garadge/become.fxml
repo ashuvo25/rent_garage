@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane fx:id="bvbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.FirebasePushExample.log_host">
+<Pane fx:id="bvbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.log_host">
    <children>
       <Button fx:id="hom_user" layoutX="35.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" text="Find Garadge" />
       <Button fx:id="hom_host" layoutX="196.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Become Host" />

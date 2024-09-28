@@ -12,10 +12,6 @@ module com.example.rent_garadge {
 //    requires com.google.api.client;
 //    requires google.api.client;
     requires java.desktop;
-    requires google.cloud.firestore;
-    requires firebase.admin;
-    requires com.google.auth;
-    requires com.google.auth.oauth2;
 //    requires com.google.api.client.extensions.java6.auth;
 //    requires com.google.api.client.json.gson;
 

@@ -1,10 +1,5 @@
 package com.example.rent_garadge;
 
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.MongoCollection;
-import org.bson.Document;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -65,22 +60,6 @@ public class signup_controller {
     @FXML
     private Label email_error_notificatiobn, username_notificatiobn, conf_pass_notificatiobn, pass_notificatiobn;
 
-
-    private MongoClient mongoClient;
-    private MongoDatabase database;
-    private MongoCollection<Document> collection;
-
-    public signup_controller() {
-        // Initialize MongoDB connection
-        try {
-            mongoClient = MongoClients.create("mongodb://localhost:27017");
-            database = mongoClient.getDatabase("Rent_Garage_Database"); // Your database name
-            collection = database.getCollection("user_data"); // Your collection name
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     @FXML
     public void initialize() {
         singUp_link.setOnAction(event -> openSignupWindow());
@@ -96,8 +75,8 @@ public class signup_controller {
 
             // Validate user input and show notification if there's an issue
             if (validateInputs(username, email, password, confirmPassword)) {
-                storeUserInDatabase(username, email, password);
-                showAlert("Success", "User registered successfully!", AlertType.INFORMATION);
+                // Simulate successful registration without database interaction
+                openSignupWindow();
             }
         });
     }
@@ -144,26 +123,6 @@ public class signup_controller {
         username_notificatiobn.setVisible(false);
         conf_pass_notificatiobn.setVisible(false);
         pass_notificatiobn.setVisible(false);
-    }
-
-    private void showAlert(String title, String message, AlertType alertType) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
-
-    private void storeUserInDatabase(String username, String email, String password) {
-        try {
-            Document newUser = new Document("username", username)
-                    .append("email", email)
-                    .append("password", password);
-            collection.insertOne(newUser);
-            System.out.println("User registered successfully!");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     private void openSignupWindow() {
