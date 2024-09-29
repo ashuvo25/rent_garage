@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="520.0" prefWidth="360.0" style="-fx-background-color: #ecfefa;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.Host_details_controll">
+   <top>
+      <TextFlow BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextFlow fx:id="deepu" layoutX="5.0" opacity="0.74" prefHeight="54.0" prefWidth="366.0" style="-fx-background-color: #47ffd0; -fx-border-radius: 1; -fx-background-radius: 1;" stylesheets="@desing.css" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <children>
+                  <Text fx:id="logo" strokeType="OUTSIDE" strokeWidth="0.0" text="Park My Garage" textAlignment="CENTER" wrappingWidth="197.77490234375">
+                     <font>
+                        <Font name="Algerian" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextFlow>
+            <Accordion layoutX="66.0" layoutY="223.0" />
+            <Text fx:id="logo1" layoutX="139.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Where would you like to garage" wrappingWidth="226.0771484375">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="39.0" layoutY="195.0" opacity="0.53" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #47ffd0; -fx-background-insets: 3; -fx-border-color: #000000; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <children>
+                  <CheckBox fx:id="outdoor_id" layoutX="16.0" layoutY="-1.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="95.0" text="Outdoor" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="185.0" layoutY="195.0" opacity="0.53" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #47ffd0; -fx-background-insets: 3; -fx-border-style: solid; -fx-border-radius: 20; -fx-border-color: #000000; -fx-background-radius: 20;">
+               <children>
+                  <CheckBox fx:id="indor_id" layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Indoor" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </AnchorPane>
+            <Text layoutX="162.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?Which veichle is yours" textAlignment="RIGHT" wrappingWidth="200.81640625">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="32.0" layoutY="320.0" opacity="0.53" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #47ffd0; -fx-background-insets: 3; -fx-border-style: solid; -fx-border-radius: 20; -fx-border-color: #000000; -fx-background-radius: 20;">
+               <children>
+                  <CheckBox fx:id="car_id" layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Car" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="186.0" layoutY="320.0" opacity="0.53" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #47ffd0; -fx-background-insets: 3; -fx-border-style: solid; -fx-border-radius: 20; -fx-border-color: #000000; -fx-background-radius: 20;">
+               <children>
+                  <CheckBox fx:id="bike_id" layoutX="12.0" layoutY="6.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="90.0" text="Bike" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="next_0" layoutX="143.0" layoutY="414.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #47ffd0; -fx-padding: 5px; -fx-border-color: darkblue; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10; -fx-background-insets: 3;" text="Next">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import javafx.scene.control.Alert.AlertType;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class signup_controller {
 
@@ -29,6 +31,9 @@ public class signup_controller {
 
     @FXML
     private Button login;
+
+    @FXML
+    private Button google_button;
 
     @FXML
     private Pane logo_name;
@@ -75,8 +80,22 @@ public class signup_controller {
 
             // Validate user input and show notification if there's an issue
             if (validateInputs(username, email, password, confirmPassword)) {
-                // Simulate successful registration without database interaction
-                openSignupWindow();
+                // Prepare the data to store in Firebase
+                Map<String, Object> userData = new HashMap<>();
+                userData.put("username", username);
+                userData.put("email", email);
+                userData.put("password", password);  // You may want to hash the password in real applications
+
+                // Call the datainput method to store the data
+                String isDataStored = FirebaseConfig.datainput("users", email, userData);
+
+                if (isDataStored.equals("signup")) {
+                    // If successful, open the signup window or display a success message
+                    openSignupWindow();
+                } else if(isDataStored.equals("duplicate")) {
+                    email_error_notificatiobn.setText("Email Already Registered");
+                    email_error_notificatiobn.setVisible(true);
+                }
             }
         });
     }
@@ -85,31 +104,36 @@ public class signup_controller {
         boolean isValid = true;
 
         if (username.isEmpty()) {
+            username_notificatiobn.setText("Username cannot be empty.");
             username_notificatiobn.setVisible(true);
             isValid = false;
         }
 
+        // Check email format
         if (email.isEmpty()) {
-            email_error_notificatiobn.setText("Email cannot be empty.");
+            email_error_notificatiobn.setText("Email cannot be empty");
             email_error_notificatiobn.setVisible(true);
             isValid = false;
-        } else if (!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
-            email_error_notificatiobn.setText("Invalid email format.");
+        } else if (!email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
+            email_error_notificatiobn.setText("Invalid email format");
             email_error_notificatiobn.setVisible(true);
             isValid = false;
         }
 
+        // Password validation
         if (password.isEmpty()) {
             pass_notificatiobn.setText("Password cannot be empty.");
             pass_notificatiobn.setVisible(true);
             isValid = false;
         } else if (password.length() < 4) {
-            pass_notificatiobn.setText("At least 4 characters long.");
+            pass_notificatiobn.setText("Password must be at least 4 characters long.");
             pass_notificatiobn.setVisible(true);
             isValid = false;
         }
 
+        // Confirm password validation
         if (!password.equals(confirmPassword)) {
+            conf_pass_notificatiobn.setText("Passwords do not match.");
             conf_pass_notificatiobn.setVisible(true);
             isValid = false;
         }

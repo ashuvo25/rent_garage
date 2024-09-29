@@ -4,16 +4,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class Login_controller {
 
-    public Label signintext;
-    public Pane left_pane;
-    public PasswordField signup_password;
     @FXML
     private TextField input_email;
 
@@ -31,17 +27,75 @@ public class Login_controller {
 
     @FXML
     private Label password_notification; // The label for password error messages
-
     @FXML
     private Label invalid; // The label for invalid login error messages
 
     @FXML
     public void initialize() {
-
+        // Initially hide the error messages
+        email_notification.setVisible(false);
+        password_notification.setVisible(false);
+        invalid.setVisible(false);
 
         singUp_link.setOnAction(event -> openSignupWindow());
 
-        login.setOnAction(event -> openHomeWindow());
+        // Handle login button click
+        login.setOnAction(event -> {
+            String email = input_email.getText();
+            String password = input_password.getText();
+
+            // Validate email and password format before proceeding
+            if (validateLogin(email, password)) {
+                // If validation passes, send the request to Firebase to check credentials
+                String emailpass = FirebaseConfig.verifyEmailAndPassword("users", email, password);
+
+                if (emailpass.equals("signin")) {
+                    // Login success, open the home window
+                    openHomeWindow();
+                } else if (emailpass.equals("incorrect_pass")) {
+                    password_notification.setText("Incorrect password");
+                    password_notification.setVisible(true);
+                } else if (emailpass.equals("no_email")) {
+                    email_notification.setText("Incorrect email");
+                    email_notification.setVisible(true);
+                } else {
+                    System.out.println(emailpass); // Handle any other cases
+                }
+            }
+        });
+    }
+
+    private boolean validateLogin(String email, String password) {
+        boolean isValid = true;
+
+        // Reset visibility of error labels
+        email_notification.setVisible(false);
+        password_notification.setVisible(false);
+        invalid.setVisible(false);
+
+        // Check email format
+        if (email.isEmpty()) {
+            email_notification.setText("Email cannot be empty");
+            email_notification.setVisible(true);
+            isValid = false;
+        } else if (!email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
+            email_notification.setText("Invalid email format");
+            email_notification.setVisible(true);
+            isValid = false;
+        }
+
+        // Check password format
+        if (password.isEmpty()) {
+            password_notification.setText("Password cannot be empty");
+            password_notification.setVisible(true);
+            isValid = false;
+        } else if (password.length() < 4) {
+            password_notification.setText("Password must be at least 4 characters");
+            password_notification.setVisible(true);
+            isValid = false;
+        }
+
+        return isValid;
     }
 
     @FXML
@@ -64,7 +118,7 @@ public class Login_controller {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Home");
+            stage.setTitle("Rent Garage");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
             Stage currentStage = (Stage) login.getScene().getWindow();
