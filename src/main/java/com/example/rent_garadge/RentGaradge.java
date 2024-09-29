@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class RentGaradge extends Application {
     @Override
+    //shuvo
     public void start(Stage stage) throws IOException {
 //        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/example/rent_garadge/logo.png")));
 //
@@ -22,7 +23,7 @@ public class RentGaradge extends Application {
 //        FirebaseConfig.data();
         System.out.println(FirebaseConfig.db);
 
-        stage.setTitle("RENT GARAGE!");
+        stage.setTitle("ParkMyGarage!");
         stage.setScene(scene);
         stage.show();
     }

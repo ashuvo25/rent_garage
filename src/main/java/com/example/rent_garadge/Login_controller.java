@@ -118,7 +118,7 @@ public class Login_controller {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Rent Garage");
+            stage.setTitle("Home");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
             Stage currentStage = (Stage) login.getScene().getWindow();
