@@ -23,7 +23,7 @@ public class RentGaradge extends Application {
 //        FirebaseConfig.data();
         System.out.println(FirebaseConfig.db);
 
-        stage.setTitle("RENT GARAGE!");
+        stage.setTitle("ParkMyGarage!");
         stage.setScene(scene);
         stage.show();
     }
