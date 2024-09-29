@@ -112,7 +112,7 @@ public class FirebaseConfig {
         firestore_connection(); // Make sure Firestore connection is initialized
 
         try {
-            // Verify the ID token using Firebase Auth
+            // Verify the  ID token using Firebase Auth
             FirebaseToken decodedToken = FirebaseAuth.getInstance().verifyIdToken(idTokenString);
             String uid = decodedToken.getUid();
             String email = decodedToken.getEmail();
