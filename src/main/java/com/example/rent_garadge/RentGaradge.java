@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class RentGaradge extends Application {
     @Override
+    //shuvo
     public void start(Stage stage) throws IOException {
 //        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/example/rent_garadge/logo.png")));
 //
