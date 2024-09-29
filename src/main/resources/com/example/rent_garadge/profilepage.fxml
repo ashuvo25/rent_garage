@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="h_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #f1f1f1;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.PropPageController">
+   <children>
+      <Pane fx:id="prof_details" layoutY="137.0" prefHeight="363.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="41.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/ProfileItems/registration-24.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="garage_registration_no" fill="#000000a8" layoutX="74.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Albert Bappy" wrappingWidth="246.13671875">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font></Text>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/ProfileItems/phone-25.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="owner_phone_number" fill="#000000a8" layoutX="72.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+880 1645 430417" wrappingWidth="246.13671875">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font></Text>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="42.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/ProfileItems/email-25.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="owner_gmail1" fill="#000000a8" layoutX="72.0" layoutY="83.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="owner_email" text="albertbappy@gmail.xyz" wrappingWidth="246.13671875">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font></Text>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="41.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/ProfileItems/location-pin-25.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="owner_location" fill="#000000a8" layoutX="73.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ECB,Chattar  R road Dhaka,Bangladesh" wrappingWidth="246.13671875">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font></Text>
+            <Pane fx:id="details_pane" layoutX="28.0" layoutY="140.0" prefHeight="133.0" prefWidth="299.0" style="-fx-background-color: #f1f1f1; -fx-background-radius: 20px; -fx-border-radius: 20px;" styleClass="details-pane">
+               <children>
+                  <Button fx:id="prof_edit" layoutX="9.0" layoutY="5.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="265.0" style="-fx-background-color: #f1f1f1;" text="Edit Profile                                          &gt;" />
+                  <Button fx:id="prof_edit1" layoutX="9.0" layoutY="28.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="265.0" style="-fx-background-color: #f1f1f1;" text="Change Password                                &gt;" />
+                  <Button fx:id="prof_edit2" layoutX="9.0" layoutY="55.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="265.0" style="-fx-background-color: #f1f1f1;" text="Settings                                               &gt;" />
+                  <Button fx:id="prof_edit3" layoutX="9.0" layoutY="78.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="265.0" style="-fx-background-color: #f1f1f1;" text="Terms &amp; Conditions                            &gt;" />
+                  <Button fx:id="prof_edit4" layoutX="13.0" layoutY="104.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="261.0" style="-fx-background-color: #f1f1f1;" text="Logout                                                 &gt; " />
+               </children></Pane>
+            <Pane layoutY="277.0" prefHeight="70.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;">
+               <children>
+                  <Pane layoutX="29.0" layoutY="21.0" prefHeight="59.0" prefWidth="299.0" styleClass="manu_pane_home">
+                     <children>
+                        <Button fx:id="comments" layoutX="32.0" layoutY="12.0" mnemonicParsing="false" styleClass="prof_coments" />
+                        <Button fx:id="profileHistory" layoutX="134.0" layoutY="12.0" mnemonicParsing="false" styleClass="prof_history" />
+                        <Button fx:id="profile_view" layoutX="235.0" layoutY="12.0" mnemonicParsing="false" styleClass="pfor_profile" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Circle fx:id="profile_image_view" fill="DODGERBLUE" layoutX="180.0" layoutY="54.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="owner_name" layoutX="118.0" layoutY="112.0" opacity="0.78" strokeType="OUTSIDE" strokeWidth="0.0" text="\@USERNAME" wrappingWidth="174.13672637939453">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="back_home" layoutX="26.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #f1f1f1;" />
+      <Text fill="#4951bf" layoutX="221.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating : 3.5 / 5" wrappingWidth="108.50469970703125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

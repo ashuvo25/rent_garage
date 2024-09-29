@@ -15,10 +15,18 @@
     </properties>
 
     <dependencies>
+
+
         <dependency>
             <groupId>com.google.firebase</groupId>
             <artifactId>firebase-admin</artifactId>
-            <version>9.1.1</version> <!-- Use the latest version -->
+            <version>LATEST</version> <!-- Use the latest version -->
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-firestore</artifactId>
+            <version>LATEST</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>

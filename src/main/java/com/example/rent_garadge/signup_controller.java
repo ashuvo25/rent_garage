@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import javafx.scene.control.Alert.AlertType;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class signup_controller {
 
@@ -29,6 +31,9 @@ public class signup_controller {
 
     @FXML
     private Button login;
+
+    @FXML
+    private Button google_button;
 
     @FXML
     private Pane logo_name;
@@ -61,8 +66,12 @@ public class signup_controller {
     private Label email_error_notificatiobn, username_notificatiobn, conf_pass_notificatiobn, pass_notificatiobn;
 
     @FXML
+
     public void initialize() {
         singUp_link.setOnAction(event -> openSignupWindow());
+
+
+
 
         login.setOnAction(event -> {
             String username = signup_Username.getText();
@@ -75,8 +84,22 @@ public class signup_controller {
 
             // Validate user input and show notification if there's an issue
             if (validateInputs(username, email, password, confirmPassword)) {
-                // Simulate successful registration without database interaction
-                openSignupWindow();
+                // Prepare the data to store in Firebase
+                Map<String, Object> userData = new HashMap<>();
+                userData.put("username", username);
+                userData.put("email", email);
+                userData.put("password", password);  // You may want to hash the password in real applications
+
+                // Call the datainput method to store the data
+                String isDataStored = FirebaseConfig.datainput("users", email, userData);
+
+                if (isDataStored=="signup") {
+                    // If successful, open the signup window or display a success message
+                    openSignupWindow();
+                } else if(isDataStored=="duplicate"){
+                    email_error_notificatiobn.setText("Email Already Registered");
+                    email_error_notificatiobn.setVisible(true);
+                }
             }
         });
     }

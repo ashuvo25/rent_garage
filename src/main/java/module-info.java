@@ -16,6 +16,13 @@ module com.example.rent_garadge {
     requires firebase.admin;
     requires com.google.auth;
     requires com.google.auth.oauth2;
+//    requires com.google.api.apicommon;
+    requires google.cloud.storage;
+
+
+    requires google.cloud.core;
+    requires com.google.api.apicommon;
+    requires javafx.web;
 //    requires com.google.api.client.extensions.java6.auth;
 //    requires com.google.api.client.json.gson;
 
