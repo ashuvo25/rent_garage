@@ -23,17 +23,10 @@ public class log_host{
     @FXML
     private Button hom_user;
 
-    public void initialize() {
 
-
-        hom_log.setOnAction(event -> loginScreen());
-        hom_user.setOnAction(event -> mapview());
-
-
-    }
     private void loginScreen() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("loginPage.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Login");
             stage.setScene(new Scene(fxmlLoader.load()));
@@ -48,7 +41,7 @@ public class log_host{
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("webView.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Login");
+            stage.setTitle("Map");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
             Stage currentStage = (Stage) hom_user.getScene().getWindow();
@@ -59,4 +52,12 @@ public class log_host{
         }
     }
 
+    public void initialize() {
+
+
+        hom_log.setOnAction(event -> loginScreen());
+        hom_user.setOnAction(event -> mapview());
+
+
+    }
 }

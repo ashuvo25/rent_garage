@@ -28,7 +28,7 @@
       </Pane>
    </left>
    <center>
-      <Pane fx:id="right_pane" prefHeight="520.0" prefWidth="360.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+      <Pane fx:id="right_pane" prefHeight="520.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" BorderPane.alignment="CENTER">
          <children>
             <QuadCurve controlX="-120.19998168945312" controlY="-59.751708984375" endX="35.000030517578125" endY="-87.17840576171875" fill="#0a574438" layoutX="373.0" layoutY="230.0" startX="35.0" startY="175.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <Label fx:id="signintext" layoutX="127.0" layoutY="106.0" text="Sign Up" textFill="#000000c0">
@@ -36,32 +36,32 @@
                   <Font name="Monospaced Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="67.0" layoutY="133.0" text="Email" textFill="#00000089">
+            <Label layoutX="66.0" layoutY="133.0" text="Email" textFill="#00000089">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="66.0" layoutY="248.0" text="Conform Password" textFill="#00000089">
+            <Label layoutX="66.0" layoutY="289.0" text="Conform Password" textFill="#00000089">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <PasswordField fx:id="signup_confrom_password" layoutX="68.0" layoutY="266.0" prefHeight="25.0" prefWidth="231.0" promptText="At least 4 character" />
-            <TextField fx:id="signup_email" layoutX="69.0" layoutY="149.0" prefHeight="25.0" prefWidth="231.0" promptText="Email" />
-            <Button fx:id="login" layoutX="127.0" layoutY="318.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="89.0" stylesheets="@desing.css" text="Sign Up -&gt;" textFill="#050404">
+            <PasswordField fx:id="signup_confrom_password" layoutX="63.0" layoutY="308.0" prefHeight="25.0" prefWidth="231.0" promptText="At least 4 character" />
+            <TextField fx:id="signup_email" layoutX="63.0" layoutY="202.0" prefHeight="25.0" prefWidth="231.0" promptText="Email" />
+            <Button fx:id="login" layoutX="127.0" layoutY="350.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="89.0" stylesheets="@desing.css" text="Sign Up -&gt;" textFill="#050404">
                <font>
                   <Font name="Monospaced Bold" size="12.0" />
                </font>
             </Button>
-            <Line endX="100.0" layoutX="40.0" layoutY="370.0" opacity="0.47" startX="-20.569984436035156" />
-            <Line endX="143.69668579101562" layoutX="195.0" layoutY="370.0" opacity="0.47" startX="25.133331298828125" />
-            <Label layoutX="140.0" layoutY="362.0" prefHeight="17.0" prefWidth="74.0" text=" Sign Up With" />
-            <Hyperlink fx:id="singUp_link" layoutX="200.0" layoutY="432.0" text="Login">
+            <Line endX="100.0" layoutX="40.0" layoutY="402.0" opacity="0.47" startX="-20.569984436035156" />
+            <Line endX="143.69668579101562" layoutX="195.0" layoutY="402.0" opacity="0.47" startX="25.133331298828125" />
+            <Label layoutX="140.0" layoutY="394.0" prefHeight="17.0" prefWidth="74.0" text=" Sign Up With" />
+            <Hyperlink fx:id="singUp_link" layoutX="200.0" layoutY="464.0" text="Login">
                <font>
                   <Font name="Monospaced Bold" size="12.0" />
                </font>
             </Hyperlink>
-            <Label layoutX="103.0" layoutY="436.0" text="Have an Account? ">
+            <Label layoutX="103.0" layoutY="468.0" text="Have an Account? ">
                <font>
                   <Font name="Monospaced Regular" size="10.0" />
                </font>
@@ -74,7 +74,7 @@
                   <GaussianBlur radius="1.5" />
                </effect>
             </ImageView>
-            <Label fx:id="copyright" layoutX="73.0" layoutY="491.0" prefHeight="31.0" prefWidth="221.0" stylesheets="@desing.css" text="COPYRIGHT(C); All Rights Reserved ">
+            <Label fx:id="copyright" layoutX="88.0" layoutY="490.0" prefHeight="31.0" prefWidth="221.0" stylesheets="@desing.css" text="COPYRIGHT(C); All Rights Reserved ">
                <font>
                   <Font name="Monospaced Regular" size="10.0" />
                </font>
@@ -104,22 +104,21 @@
                   </ImageView>
                </children>
             </Pane>
-            <QuadCurve controlX="160.06661987304688" controlY="265.20001220703125" endX="35.000030517578125" endY="-87.17840576171875" fill="#0a574438" layoutX="-35.0" layoutY="158.0" startX="35.0" startY="175.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-            <TextField fx:id="signup_Username" layoutX="69.0" layoutY="187.0" prefHeight="25.0" prefWidth="231.0" promptText="Name" />
-            <Label fx:id="signup_name_text" layoutX="67.0" layoutY="171.0" text="Name" textFill="#0000008a">
+            <TextField fx:id="signup_Username" layoutX="63.0" layoutY="154.0" prefHeight="25.0" prefWidth="231.0" promptText="Name" />
+            <Label fx:id="signup_name_text" layoutX="66.0" layoutY="184.0" text="Name" textFill="#0000008a">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="66.0" layoutY="210.0" text="Password" textFill="#00000089">
+            <Label layoutX="66.0" layoutY="241.0" text="Password" textFill="#00000089">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <PasswordField fx:id="signup_password" layoutX="68.0" layoutY="226.0" prefHeight="25.0" prefWidth="231.0" promptText="At least 4 character" />
-            <Button fx:id="google_button" layoutX="120.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
-            <Button fx:id="facebook_button" layoutX="160.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
-            <Button fx:id="github_button" layoutX="200.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
+            <PasswordField fx:id="signup_password" layoutX="63.0" layoutY="259.0" prefHeight="25.0" prefWidth="231.0" promptText="At least 4 character" />
+            <Button fx:id="google_button" layoutX="120.0" layoutY="422.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
+            <Button fx:id="facebook_button" layoutX="160.0" layoutY="422.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
+            <Button fx:id="github_button" layoutX="200.0" layoutY="422.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="25.0" stylesheets="@desing.css" />
             <Label fx:id="email_error_notificatiobn" alignment="CENTER_RIGHT" layoutX="151.0" layoutY="167.0" prefHeight="27.0" prefWidth="149.0" text="Invalid email format" textAlignment="RIGHT" textFill="#ff0000cc" textOverrun="CLIP" visible="false" />
             <Label fx:id="username_notificatiobn" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="205.0" prefHeight="27.0" prefWidth="171.0" text="Username cannot be empty" textAlignment="RIGHT" textFill="#ff0000cc" textOverrun="CLIP" visible="false" />
             <Label fx:id="conf_pass_notificatiobn" alignment="CENTER_RIGHT" layoutX="118.0" layoutY="285.0" prefHeight="27.0" prefWidth="180.0" text="Passwords do not match" textAlignment="RIGHT" textFill="#ff0000cc" textOverrun="CLIP" visible="false" />

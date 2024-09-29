@@ -127,7 +127,7 @@ public class signup_controller {
 
     private void openSignupWindow() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("loginPage.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Login");
             stage.setScene(new Scene(fxmlLoader.load()));

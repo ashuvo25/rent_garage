@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #f1f1f1;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.HistoryController">
+   <children>
+      <Text layoutX="149.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History" wrappingWidth="93.33673095703125">
+         <font>
+            <Font name="Century" size="19.0" />
+         </font>
+      </Text>
+      <Pane fx:id="history_pane" layoutX="33.0" layoutY="91.0" prefHeight="104.0" prefWidth="300.0" style="-fx-background-color: #f1f1;" stylesheets="@desing.css">
+         <children>
+            <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garage 5" wrappingWidth="254.13671875">
+               <font>
+                  <Font name="Calibri" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dhaka,Mirpur,ECB" wrappingWidth="223.7366943359375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date : 15.9.2024" wrappingWidth="223.7366943359375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review Positive">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="126.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Time: 40 min">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="#000dff" layoutX="230.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.5/5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="history_pane1" layoutX="30.0" layoutY="204.0" prefHeight="104.0" prefWidth="300.0" style="-fx-background-color: #f1f1;" stylesheets="@desing.css">
+         <children>
+            <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garage 5" wrappingWidth="254.13671875">
+               <font>
+                  <Font name="Calibri" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dhaka,Mirpur,ECB" wrappingWidth="223.7366943359375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date : 15.9.2024" wrappingWidth="223.7366943359375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review Positive">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="126.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Time: 40 min">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="#000dff" layoutX="230.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.5/5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="history_pane2" layoutX="30.0" layoutY="316.0" prefHeight="104.0" prefWidth="300.0" style="-fx-background-color: #f1f1;" stylesheets="@desing.css">
+         <children>
+            <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garage 5" wrappingWidth="254.13671875">
+               <font>
+                  <Font name="Calibri" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dhaka,Mirpur,ECB" wrappingWidth="223.7366943359375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date : 15.9.2024" wrappingWidth="223.7366943359375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review Positive">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="126.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Time: 40 min">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="#000dff" layoutX="230.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.5/5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="30.0" layoutY="428.0" prefHeight="58.0" prefWidth="300.0" styleClass="manu_pane_home" stylesheets="@desing.css">
+         <children>
+            <Button fx:id="comments" layoutX="32.0" layoutY="12.0" mnemonicParsing="false" styleClass="prof_coments" stylesheets="@desing.css" />
+            <Button fx:id="profileHistory" layoutX="134.0" layoutY="12.0" mnemonicParsing="false" styleClass="prof_history" />
+            <Button fx:id="profile_view" layoutX="235.0" layoutY="12.0" mnemonicParsing="false" styleClass="pfor_profile" />
+         </children>
+      </Pane>
+      <Button fx:id="back_home" layoutX="30.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: #f1f1f1;" styleClass="back_button" />
+   </children>
+
+
+
+
+</Pane>
