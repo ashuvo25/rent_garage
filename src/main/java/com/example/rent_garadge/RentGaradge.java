@@ -9,7 +9,11 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
+
+
 public class RentGaradge extends Application {
+     static String user_id;
+
     @Override
     public void start(Stage stage) throws IOException {
 //        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/example/rent_garadge/logo.png")));

@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #e7fff9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nothing">
+<AnchorPane prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #e7fff9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.LocationTypeControl">
    <children>
       <BorderPane prefHeight="70.0" prefWidth="415.0" style="-fx-background-color: #005942;">
          <center>
@@ -24,16 +24,16 @@
             <Font name="Britannic Bold" size="20.0" />
          </font>
       </Text>
-      <TextField layoutX="60.0" layoutY="288.0" prefHeight="46.0" prefWidth="105.0" style="-fx-background-radius: 10;" text="City" />
-      <TextField layoutX="60.0" layoutY="355.0" prefHeight="53.0" prefWidth="190.0" style="-fx-background-radius: 10;" text="Street Address" />
+      <TextField fx:id="city_id" layoutX="60.0" layoutY="288.0" prefHeight="46.0" prefWidth="105.0" promptText="City" style="-fx-background-radius: 10;" />
+      <TextField fx:id="address_id" layoutX="60.0" layoutY="355.0" prefHeight="53.0" prefWidth="190.0" promptText="Street Address" style="-fx-background-radius: 10;" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="18.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What kind of of space do you need?">
          <font>
             <Font name="Britannic Bold" size="20.0" />
          </font>
       </Text>
-      <CheckBox layoutX="60.0" layoutY="164.0" mnemonicParsing="false" text="Residential" />
-      <CheckBox layoutX="60.0" layoutY="197.0" mnemonicParsing="false" text="Commercial" />
-      <Button layoutX="182.0" layoutY="439.0" mnemonicParsing="false" text="Next" />
+      <CheckBox fx:id="residential_id" layoutX="60.0" layoutY="164.0" mnemonicParsing="false" text="Residential" />
+      <CheckBox fx:id="commercial_id" layoutX="60.0" layoutY="197.0" mnemonicParsing="false" text="Commercial" />
+      <Button fx:id="next_1" layoutX="182.0" layoutY="439.0" mnemonicParsing="false" text="Next" />
    </children>
 </AnchorPane>
