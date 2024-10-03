@@ -454,3 +454,15 @@ AnchorPane {
     -fx-background-image: url('Icons/down-arrow-48.png');
     -fx-background-color: rgba(255, 255, 255, 0);
 }
+.dropdown_map{
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-background-image: url('Icons/down-arrow-30.png');
+    -fx-background-color: rgba(255, 255, 255, 0);
+}
+.updown_maps{
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-background-image: url('Icons/up-arrow-30.png');
+    -fx-background-color: rgba(255, 255, 255, 0);
+}
