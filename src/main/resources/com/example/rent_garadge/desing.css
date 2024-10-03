@@ -300,7 +300,21 @@ AnchorPane {
 
     -fx-background-image: url('Icons/back-32.png');
 }
+.back_button{
+    -fx-background-image: url('Icons/back-32.png');
+}
+.image_add_button{
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-image: url('Icons/camera-30.png');
+    -fx-background-color: rgba(0, 0, 0, 0);
 
+}
 
 #back_home,#threeDot ,.back_button{
     -fx-background-size: cover;
@@ -320,7 +334,7 @@ AnchorPane {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 3, 0.5, 1.2, 1.2);
 }
 .manu_pane_home{
-    -fx-background-color: #2e133a;
+    -fx-background-color: rgba(46, 19, 58, 0.93);
     -fx-background-radius: 10px;
 
 }
@@ -432,4 +446,11 @@ AnchorPane {
     -fx-background-radius: 10px;
     -fx-background-color: #327fa6;
 
+}
+
+.dropdown{
+      -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-background-image: url('Icons/down-arrow-48.png');
+    -fx-background-color: rgba(255, 255, 255, 0);
 }
