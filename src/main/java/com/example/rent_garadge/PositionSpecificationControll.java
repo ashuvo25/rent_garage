@@ -75,11 +75,11 @@ public class PositionSpecificationControll {
     private void openNextWindow(Map<String, Object> details) {
         try {
             // Load the FXML file and create a new scene
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginPanelUser.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("map.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
             // Get the controller after loading the FXML
-            LoginPanelUserControl controller = fxmlLoader.getController();
+            map_controller controller = fxmlLoader.getController();
 
             // Pass the selections to the new controller
             controller.garageDetails(details);

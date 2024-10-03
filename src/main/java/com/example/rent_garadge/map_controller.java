@@ -1,72 +1,203 @@
 package com.example.rent_garadge;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
+import jdk.swing.interop.SwingInterOpUtils;
+import netscape.javascript.JSObject;
+
+import java.io.IOException;
+import java.util.Map;
 
 public class map_controller {
+
+    // Global variables to store latitude and longitude
+    private String Latitude = "";
+    private String Longitude = "";
 
     @FXML
     private WebView mapView;
 
+    @FXML
+    private Button pin_loction;
+
+    Map<String, Object> details;
+
+    @FXML
     public void initialize() {
-        // Load the Bing Maps HTML content into the WebView when the controller is initialized
-        loadMap();
+
     }
 
-    private void loadMap() {
+
+    public void garageDetails(Map<String, Object> details) {
+        this.details=details;
+        String location=(String) details.get("city")+","+(String)details.get("address");
+//        System.out.println("This is nothing");
+//        System.out.println(details);
         WebEngine webEngine = mapView.getEngine();
-        String htmlContent = generateBingMapHTML();
-        webEngine.loadContent(htmlContent);
+        webEngine.setJavaScriptEnabled(true);
+        String mapHTML = generateMapHTML(location);
+        webEngine.loadContent(mapHTML);
+
+        // Get the JavaScript window object to expose Java methods to it
+        webEngine.documentProperty().addListener((obs, oldDoc, newDoc) -> {
+            if (newDoc != null) {
+                JSObject window = (JSObject) webEngine.executeScript("window");
+                window.setMember("app", this);  // Expose the 'app' object (this Java class) to JavaScript
+            }
+        });
     }
 
-    private String generateBingMapHTML() {
-        String apiKey = "AkcKTkaCZKKAdrUrSATJWbV7xVleTJ1HtvHxp04_PKIVO1w5SSJGokoMWimJITcj";  // Your Bing Maps API Key
-        return "<!DOCTYPE html>\n" +
-                "<html lang=\"en\">\n" +
-                "<head>\n" +
-                "    <meta charset=\"UTF-8\">\n" +
-                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
-                "    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=" + apiKey + "&callback=loadMapScenario' async defer></script>\n" +
-                "    <title>Map of Dhaka</title>\n" +
-                "    <style>\n" +
-                "        #map {\n" +
-                "            width: 100%;\n" +
-                "            height: 90vh;\n" +  // Make sure the map takes up most of the screen height
-                "            background-color: #e7fff9;\n" +  // Ensure background is not white
-                "        }\n" +
-                "        body {\n" +
-                "            margin: 0;\n" +
-                "            padding: 0;\n" +
-                "            background-color: #032030;\n" +  // Ensure a different background color for visibility
-                "            color: white;\n" +  // Text color to ensure it stands out
-                "            font-family: Arial, sans-serif;\n" +
-                "        }\n" +
-                "        .info {\n" +
-                "            padding: 10px;\n" +
-                "            background-color: rgba(0, 0, 0, 0.7);\n" +  // Make background slightly transparent
-                "            color: white;\n" +
-                "            position: absolute;\n" +
-                "            bottom: 10px;\n" +
-                "            left: 10px;\n" +
-                "            z-index: 1000;\n" +  // Ensure the info box is above the map
-                "        }\n" +
-                "    </style>\n" +
-                "</head>\n" +
-                "<body>\n" +
-                "    <div id=\"map\"></div>\n" +
-                "    <div class='info'>Location: Dhaka, Bangladesh</div>\n" +  // Add an info box for location
-                "    <script>\n" +
-                "        function loadMapScenario() {\n" +
-                "            var map = new Microsoft.Maps.Map(document.getElementById('map'), {\n" +
-                "                credentials: '" + apiKey + "',\n" +
-                "                center: new Microsoft.Maps.Location(23.8103, 90.4125),\n" +  // Dhaka's coordinates
-                "                zoom: 12\n" +
-                "            });\n" +
-                "        }\n" +
-                "    </script>\n" +
-                "</body>\n" +
-                "</html>";
+    // Method to be called from JavaScript to update latitude and longitude
+    public void updateLocation(String lat, String lon) {
+        this.Latitude = lat;
+        this.Longitude = lon;
+        details.put("Latitude", this.Latitude );
+        details.put("Longitude", this.Longitude);
+        String result= FirebaseConfig.datainput("garage_details",RentGaradge.user_id,details);
+        System.out.println(result);
+        System.out.println(details);
+        FirebaseConfig.datainput("garage_details",RentGaradge.user_id,details);
+        System.out.println("Latitude: " + Latitude + ", Longitude: " + Longitude);
+
+        openNextWindow(details);
     }
+
+    private void openNextWindow(Map<String, Object> details) {
+        try {
+            // Load the FXML file and create a new scene
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Homes.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+//            // Get the controller after loading the FXML
+//            LoginPanelUserControl controller = fxmlLoader.getController();
+//
+//            // Pass the selections to the new controller
+//            controller.garageDetails(details);
+
+            // Create and set the new stage
+            Stage stage = new Stage();
+            stage.setTitle("Requirements");
+            stage.setScene(scene);
+            stage.show();
+
+//            // Close the current stage
+//            Stage currentStage = (Stage) ((Node) someNode).getScene().getWindow(); // someNode should be a reference to any node in the current scene
+//            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String generateMapHTML(String locationName) {
+        return """
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AkcKTkaCZKKAdrUrSATJWbV7xVleTJ1HtvHxp04_PKIVO1w5SSJGokoMWimJITcj&callback=loadMapScenario' async defer></script>
+                    <title>Map View</title>
+                    <style>
+                        body {
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                        }
+                        #map {
+                            width: 425px;
+                            height: 350px;
+                            position: relative;
+                        }
+                        .dot {
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            background-color: red;
+                            border-radius: 50%;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        #locationInfo {
+                            margin-top: 10px;
+                            font-weight: bold;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div id="map"></div>
+                    <div class="dot" id="dot"></div>
+                    <button id="pinButton">Pin Your Location</button>
+                    <div id="locationInfo"></div>
+
+                    <script>
+                        var map;
+                        var dotLatitude, dotLongitude;
+
+                        function loadMapScenario() {
+                            map = new Microsoft.Maps.Map(document.getElementById('map'), {
+                                credentials: 'AkcKTkaCZKKAdrUrSATJWbV7xVleTJ1HtvHxp04_PKIVO1w5SSJGokoMWimJITcj',
+                                zoom: 10,
+                                center: new Microsoft.Maps.Location(0, 0)
+                            });
+
+                            Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
+                                var searchManager = new Microsoft.Maps.Search.SearchManager(map);
+                                var searchRequest = {
+                                    where: '""" + locationName + """
+                                    ',
+                                    callback: function (result) {
+                                        if (result && result.results && result.results.length > 0) {
+                                            var location = result.results[0].location;
+                                            map.setView({
+                                                center: location,
+                                                zoom: 17
+                                            });
+                                            updateDotPosition();
+                                        }
+                                    },
+                                    errorCallback: function (e) {
+                                        console.log('Error:', e);
+                                    }
+                                };
+                                searchManager.geocode(searchRequest);
+                            });
+
+                            Microsoft.Maps.Events.addHandler(map, 'viewchangeend', updateDotPosition);
+                        }
+
+                        function updateDotPosition() {
+                            var center = map.getCenter();
+                            dotLatitude = center.latitude;
+                            dotLongitude = center.longitude;
+                        }
+
+                        document.getElementById('pinButton').addEventListener('click', function() {
+                            if (dotLatitude && dotLongitude) {
+//                                document.getElementById('locationInfo').innerText =
+//                                    `Latitude: ${dotLatitude.toFixed(6)}, Longitude: ${dotLongitude.toFixed(6)}`;
+
+                                // Call the Java method to update the global variables
+                                window.app.updateLocation(dotLatitude.toFixed(6), dotLongitude.toFixed(6));
+                            } else {
+                                document.getElementById('locationInfo').innerText = 'Location not pinned yet.';
+                            }
+                        });
+                    </script>
+                </body>
+                </html>
+                """;
+    }
+
 
 }

@@ -70,7 +70,7 @@ public class PropPageController { // Made the class concrete
     @FXML
     private Button profile_view;
 
-    Map<String, Object> UserData;
+
 
     @FXML
     private void profileFunct() {
@@ -106,8 +106,10 @@ public class PropPageController { // Made the class concrete
     @FXML
     public void initialize() {
         String user_id = RentGaradge.user_id;  // Assuming you have user_id stored somewhere
-        UserData = FirebaseConfig.getUserData("users", user_id);  // Retrieve user data from Firebase
-
+        if(RentGaradge.UserData==null){
+            RentGaradge.UserData = FirebaseConfig.getUserData("users", "a@g.com");  // Retrieve user data from Firebase
+        }
+        Map<String, Object> UserData=RentGaradge.UserData;
         // Check if UserData is not null and has the expected keys
         if (UserData != null) {
             // Set the garage registration number

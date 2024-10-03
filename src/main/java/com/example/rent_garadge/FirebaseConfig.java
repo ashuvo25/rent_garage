@@ -3,10 +3,7 @@ package com.example.rent_garadge;
 //import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFuture;
 import com.google.auth.oauth2.GoogleCredentials;
-import com.google.cloud.firestore.DocumentReference;
-import com.google.cloud.firestore.DocumentSnapshot;
-import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.WriteResult;
+import com.google.cloud.firestore.*;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,7 +13,9 @@ import com.google.firebase.auth.FirebaseToken;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FirebaseConfig {
@@ -125,6 +124,32 @@ public class FirebaseConfig {
             // Handle exceptions, can also return null or an empty map with error handling
             return null;
         }
+    }
+
+
+
+    public static List<Map<String, Object>> getAllGarageDetails() {
+        firestore_connection(); // Ensure Firestore connection is initialized
+        List<Map<String, Object>> garageList = new ArrayList<>();
+
+        try {
+            // Reference the 'garage_details' collection
+            CollectionReference garagesRef = db.collection("garage_details");
+
+            // Asynchronously retrieve all documents in the collection
+            ApiFuture<QuerySnapshot> future = garagesRef.get();
+            QuerySnapshot querySnapshot = future.get();
+
+            // Iterate through the documents and add their data to the list
+            for (DocumentSnapshot document : querySnapshot.getDocuments()) {
+                garageList.add(document.getData());
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error retrieving garage details: " + e.getMessage());
+        }
+
+        return garageList;
     }
 
 

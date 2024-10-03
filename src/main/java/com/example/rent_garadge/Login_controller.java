@@ -54,7 +54,7 @@ public class Login_controller {
                 String emailpass = FirebaseConfig.verifyEmailAndPassword("users", email, password);
 
                 if (emailpass.equals("signin")) {
-//                     RentGaradge.user_id=email;
+                     RentGaradge.user_id=email;
                     // Login success, open the home window
                     openHomeWindow();
                 } else if (emailpass.equals("incorrect_pass")) {
