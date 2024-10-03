@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #e7fff9;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.prof_image_takeController">
+   <children>
+      <Circle fill="DODGERBLUE" layoutX="180.0" layoutY="110.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="26.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #e7fff9;" styleClass="back_button" stylesheets="@desing.css" />
+      <Button id="image_add_button" fx:id="add_image" layoutX="209.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleAddImageButton" prefWidth="24.0" styleClass="image_add_button" />
+      <Pane fx:id="popup_pane" layoutY="498.0" prefHeight="172.0" prefWidth="360.0" style="-fx-background-color: #111111;" styleClass="popup_pane">
+         <children>
+            <Button fx:id="dropdown_mutton" layoutX="160.0" mnemonicParsing="false" onAction="#handleDropdownMutton" prefHeight="37.0" prefWidth="44.0" styleClass="dropdown" />
+            <Button fx:id="take_photo" layoutX="40.0" layoutY="54.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="278.0" text="Take Photo" />
+            <Button fx:id="choose_photo" layoutX="40.0" layoutY="96.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="278.0" text="Choose From gallary" />
+         </children>
+      </Pane>
+      <Button fx:id="prof_img_next" layoutX="264.0" layoutY="409.0" mnemonicParsing="false" text="Next" />
+      <Text layoutX="87.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Your profile Image" wrappingWidth="234.9367218017578" />
+      <Button layoutX="301.0" layoutY="26.0" mnemonicParsing="false" text="Skip" />
+   </children>
+</Pane>

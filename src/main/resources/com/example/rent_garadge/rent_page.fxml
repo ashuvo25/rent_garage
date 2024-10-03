@@ -41,8 +41,8 @@
                         <Text fontSmoothingType="LCD" layoutX="93.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available slot 11" wrappingWidth="99.9755859375" />
                         <Text fontSmoothingType="LCD" layoutX="94.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="65$ /h" wrappingWidth="99.9755859375" />
                         <Button layoutX="252.0" layoutY="34.0" mnemonicParsing="false" styleClass="visit_garage" text="Visit" textFill="WHITE" />
-                        <Text layoutX="227.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="distant :" wrappingWidth="45.0" />
-                        <Text layoutX="270.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.5" wrappingWidth="22.066619873046875">
+                        <Text layoutX="221.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="distance :" wrappingWidth="50.5999755859375" />
+                        <Text layoutX="270.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 4.5" wrappingWidth="22.066619873046875">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
