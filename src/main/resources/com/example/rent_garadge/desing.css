@@ -398,3 +398,38 @@ AnchorPane {
     -fx-background-radius: 20px;
     -fx-border-radius: 20px;
 }
+.rent_background_class{
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
+
+#car_buttons,#bike_buttons{
+    -fx-background-radius: 7px;
+    -fx-background-color:  #fdfeff;
+}#car_buttons{
+     -fx-background-image: url('Icons/car-42.png');
+ }#bike_buttons{
+       -fx-background-image: url('Icons/bike-42.png');
+   }
+#car_buttons:hover, #bike_buttons:hover,.visit_garage:pressed {
+    -fx-background-color: #5c5cba;
+}
+.garage_lists{
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+.image_garage{
+    -fx-background-radius: 10px;
+    /*-fx-background-radius: 100px;*/
+    -fx-background-image: url('Photos/rent.png');
+    -fx-background-clip: padding-box;
+    -fx-background-size: cover;
+}
+.image_in_the_background_pane{
+    -fx-background-radius: 10px;
+}
+.visit_garage{
+    -fx-background-radius: 10px;
+    -fx-background-color: #327fa6;
+
+}

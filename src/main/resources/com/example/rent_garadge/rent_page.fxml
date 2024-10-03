@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #4299ca;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.RentPageController">
+    <children>
+      <Text fill="WHITE" layoutX="30.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find the best place for your vehicle">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Text>
+      <Pane fx:id="rent_background" layoutY="95.0" prefHeight="439.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" styleClass="rent_background_class">
+         <children>
+            <Button fx:id="car_buttons" layoutX="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="car_button" />
+            <Button fx:id="bike_buttons" layoutX="198.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="bike_button" />
+              <Pane fx:id="nav_bar" layoutX="26.0" layoutY="334.0" prefHeight="59.0" prefWidth="309.0" styleClass="nav_bar" stylesheets="@desing.css">
+                  <children>
+                      <Button fx:id="home_btn" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" styleClass="home_btn" stylesheets="@desing.css" text="" />
+                      <Button fx:id="home_btn1" layoutX="78.0" layoutY="14.0" mnemonicParsing="false" styleClass="map_btn" stylesheets="@desing.css" text="" />
+                      <Button fx:id="home_btn4" layoutX="259.0" layoutY="15.0" mnemonicParsing="false" prefWidth="0.0" styleClass="noti_btn" text="" />
+                      <Button fx:id="home_btn2" layoutX="140.0" layoutY="14.0" mnemonicParsing="false" styleClass="rnt_btn" />
+                      <Button fx:id="home_btn3" layoutX="203.0" layoutY="15.0" mnemonicParsing="false" styleClass="frn_btn" />
+                  </children>
+              </Pane>
+            <ScrollPane layoutX="1.0" layoutY="31.0" prefHeight="305.0" prefWidth="359.0" style="-fx-background-color: #fdfeff;" styleClass="scroll_pane_for_rent_page">
+               <content>
+                  <Pane layoutX="20.0" layoutY="20.0" prefHeight="70.0" prefWidth="340.0" style="-fx-background-color: #B2BEB5;" styleClass="garage_lists">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="5.0" prefHeight="59.0" prefWidth="62.0" styleClass="image_garage" />
+                        <Text layoutX="95.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City Name" wrappingWidth="99.9755859375">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fontSmoothingType="LCD" layoutX="93.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available slot 11" wrappingWidth="99.9755859375" />
+                        <Text fontSmoothingType="LCD" layoutX="94.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="65$ /h" wrappingWidth="99.9755859375" />
+                        <Button layoutX="252.0" layoutY="34.0" mnemonicParsing="false" styleClass="visit_garage" text="Visit" textFill="WHITE" />
+                        <Text layoutX="227.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="distant :" wrappingWidth="45.0" />
+                        <Text layoutX="270.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.5" wrappingWidth="22.066619873046875">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="290.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="km" wrappingWidth="22.066619873046875">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </content>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </ScrollPane>
+            <Text layoutX="38.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category  :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TextField layoutX="30.0" layoutY="31.0" prefHeight="39.0" prefWidth="258.0" promptText="search by area" styleClass="se_box" />
+      <Button layoutX="300.0" layoutY="37.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="33.0" style="-fx-background-color: #4299ca;" styleClass="se_butt" />
+    </children>
+</Pane>
