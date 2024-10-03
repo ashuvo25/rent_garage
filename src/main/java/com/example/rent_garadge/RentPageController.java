@@ -4,18 +4,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class home_controller {
+public class RentPageController {
+    @FXML
+    private Button bike_buttons;
 
     @FXML
-    private Label change_users;
+    private Button car_buttons;
 
     @FXML
     private Button home_btn;
@@ -33,33 +32,30 @@ public class home_controller {
     private Button home_btn4;
 
     @FXML
-    private Pane home_options;
-
-    @FXML
     private Pane nav_bar;
 
     @FXML
-    private Pane epn1;
+    private Pane rent_background;
 
     @FXML
-    private Pane epn2;
-
-    @FXML
-    private Pane epn3;
-
-    @FXML
-    private Pane epn4;
-
-    // Additional Pane for showing tooltips
-    @FXML
-    private Pane hover_pane;
-
-    public void initialize() {
-
-          home_btn4.setOnAction(event -> profileFunct());
-          home_btn2.setOnAction(event -> rent_page());
-//          hideHoverPane();
+    private  void initialize() {
+        bike_buttons.setOnAction(event -> handleBikeButtonClick());
+        car_buttons.setOnAction(event -> handleCarButtonClick());
+        home_btn4.setOnAction(event -> profileFunct());
+        home_btn.setOnAction(event -> homescreen());
     }
+    @FXML
+    private void handleCarButtonClick() {
+        car_buttons.setStyle("-fx-background-color: #5c5cba;");
+        bike_buttons.setStyle("-fx-background-color: #fdfeff;");
+    }
+    @FXML
+    private void handleBikeButtonClick() {
+        bike_buttons.setStyle("-fx-background-color: #5c5cba;");
+        car_buttons.setStyle("-fx-background-color: #fdfeff;");
+    }
+
+
 
     private void profileFunct() {
         try {
@@ -75,35 +71,20 @@ public class home_controller {
 
         }
     }
-    private  void rent_page(){
+
+    private  void  homescreen(){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("rent_page.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Profile");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
-            Stage currentStage = (Stage) home_btn2.getScene().getWindow();
+            Stage currentStage = (Stage) home_btn.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
 
         }
     }
-
-//    private void showHoverPane(Pane pane, String labelText, String color) {
-//        hover_pane.setVisible(true);
-//        hover_pane.setLayoutX(pane.getLayoutX() + 60);
-//        hover_pane.setLayoutY(pane.getLayoutY());
-//        hover_pane.setStyle("-fx-background-color: #ffffff; -fx-border-color: " + color + ";");
-//        change_users.setText(labelText);
-//    }
-
-//    private void hideHoverPane() {
-//        hover_pane.setVisible(false); // Hide the tooltip when not hovering
-//    }
-
-
-
-
 
 }

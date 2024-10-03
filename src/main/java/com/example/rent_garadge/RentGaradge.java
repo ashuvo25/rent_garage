@@ -15,12 +15,13 @@ public class RentGaradge extends Application {
      static String user_id;
 
     @Override
+    //shuvo
     public void start(Stage stage) throws IOException {
 //        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/example/rent_garadge/logo.png")));
 //
 //        stage.initStyle(StageStyle.UNDECORATED);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(RentGaradge.class.getResource("become.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(RentGaradge.class.getResource("rent_page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 360, 500);
 
 //        FirebaseConfig.data();

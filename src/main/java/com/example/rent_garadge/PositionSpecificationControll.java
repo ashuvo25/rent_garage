@@ -58,7 +58,7 @@ public class PositionSpecificationControll {
             details.put("length", length);
             details.put("description", description.isEmpty() ? "Optional" : description);  // Default to "Optional" if empty
             System.out.println(details);
-            FirebaseConfig.datainput("garage_details",RentGaradge.user_id,details);
+//            FirebaseConfig.datainput("garage_details",RentGaradge.user_id,details);
             // Proceed to the next step
             openNextWindow(details);
         } else {

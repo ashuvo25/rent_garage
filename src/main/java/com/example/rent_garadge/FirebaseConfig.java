@@ -107,6 +107,27 @@ public class FirebaseConfig {
         }
     }
 
+    public static Map<String, Object> getUserData(String collection, String email) {
+        firestore_connection();
+        try {
+            DocumentReference docRef = db.collection(collection).document(email);
+            ApiFuture<DocumentSnapshot> future = docRef.get();
+            DocumentSnapshot documentSnapshot = future.get();
+
+            if (documentSnapshot.exists()) {
+                // Return the user data as a map
+                return documentSnapshot.getData();
+            } else {
+                // If no document is found, return null or an empty map
+                return null; // or return Collections.emptyMap();
+            }
+        } catch (Exception e) {
+            // Handle exceptions, can also return null or an empty map with error handling
+            return null;
+        }
+    }
+
+
     // Function to verify the Google ID token and create a user in Firestore
     public static String googleSignUp(String idTokenString) {
         firestore_connection(); // Make sure Firestore connection is initialized
