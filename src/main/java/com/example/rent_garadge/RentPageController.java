@@ -1,11 +1,14 @@
 package com.example.rent_garadge;
 
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -35,14 +38,25 @@ public class RentPageController {
     private Pane nav_bar;
 
     @FXML
-    private Pane rent_background;
+    private Button updown_maps;
 
+    @FXML
+    private Pane map_view;
+    @FXML
+    private Button dropdown_map;
+    @FXML
+    private Pane rent_background;
+    private boolean isRentBackgroundVisible = false;
     @FXML
     private  void initialize() {
         bike_buttons.setOnAction(event -> handleBikeButtonClick());
         car_buttons.setOnAction(event -> handleCarButtonClick());
         home_btn4.setOnAction(event -> profileFunct());
         home_btn.setOnAction(event -> homescreen());
+        rent_background.setLayoutY(420);
+        map_view.setVisible(true);
+        dropdown_map.setVisible(false);
+        updown_maps.setVisible(true);
     }
     @FXML
     private void handleCarButtonClick() {
@@ -87,4 +101,33 @@ public class RentPageController {
         }
     }
 
+    @FXML
+    private void handleUpdownMaps() {
+        if (!isRentBackgroundVisible) {
+            map_view.setVisible(false);
+            TranslateTransition transitionUp = new TranslateTransition(Duration.millis(500), rent_background);
+            transitionUp.setToY(-340);
+            transitionUp.play();
+
+            updown_maps.setVisible(false);
+            dropdown_map.setVisible(true);
+
+            isRentBackgroundVisible = true;
+        }
+    }
+
+    @FXML
+    private void handleDropdownMap() {
+        if (isRentBackgroundVisible) {
+
+            TranslateTransition transitionDown = new TranslateTransition(Duration.millis(500), rent_background);
+            transitionDown.setToY(-30);
+            transitionDown.play();
+            transitionDown.setOnFinished(e -> map_view.setVisible(true));
+            dropdown_map.setVisible(false);
+            updown_maps.setVisible(true);
+
+            isRentBackgroundVisible = false;
+        }
+    }
 }
