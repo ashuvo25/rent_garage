@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.webController">
+    <children>
+      <TextField layoutX="7.0" layoutY="207.0" prefHeight="129.0" prefWidth="350.0" style="-fx-background-color: transparent; -fx-border-color: #e5fffe; -fx-border-width: 2;" />
+        <Text layoutX="133.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Booking Data" wrappingWidth="95.5322265625">
+            <font>
+                <Font name="Bell MT Bold" size="14.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="13.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Icons/icons8-back-button-64.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="103.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Road-4, Gulshan, Dhaka" />
+        <Line endX="241.0" layoutX="120.0" layoutY="57.0" startX="-121.0" />
+        <Button layoutX="113.0" layoutY="216.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: skyblue; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-insets: 1; -fx-border-width: 2;" text="Use Promo Code" />
+        <Button layoutX="162.0" layoutY="69.0" mnemonicParsing="false" text="Car" />
+        <CheckBox layoutX="14.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="331.0" style="-fx-background-color: White; -fx-border-color: Transparent; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text="I agree with all the terms &amp; condition." textFill="#1e50cd">
+            <font>
+                <Font name="Bell MT" size="13.0" />
+            </font>
+        </CheckBox>
+        <Button layoutX="49.0" layoutY="390.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" style="-fx-background-color: #e5fffe; -fx-border-color: skyblue; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-insets: 1; -fx-border-width: 2;" text="Card Payment" textAlignment="JUSTIFY">
+            <font>
+                <Font name="Bell MT Italic" size="13.0" />
+            </font>
+        </Button>
+      <TextArea layoutX="6.0" layoutY="123.0" opacity="0.78" prefHeight="77.0" prefWidth="350.0" style="-fx-background-color: #e5fffe; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-width: 5;" text="Vehicle Number: xxxx - xxxx - xxxx&#10;" />
+      <Text layoutX="25.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtotal Parking:">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="283.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Taka:0">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="94.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="283.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Taka:0">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="203.0" layoutY="390.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" style="-fx-background-color: #e5fffe; -fx-border-color: skyblue; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-insets: 1; -fx-border-width: 2;" text="Pay 50 taka" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bell MT Bold" size="13.0" />
+         </font>
+      </Button>
+    </children>
+</Pane>
