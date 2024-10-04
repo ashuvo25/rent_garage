@@ -9,7 +9,11 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
+
+
 public class RentGaradge extends Application {
+     static String user_id;
+
     @Override
     //shuvo
     public void start(Stage stage) throws IOException {
