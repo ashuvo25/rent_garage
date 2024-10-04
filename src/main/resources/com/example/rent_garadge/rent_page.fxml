@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #4299ca;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.RentPageController">
     <children>
-      <Text fill="WHITE" layoutX="30.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find the best place for your vehicle">
+      <Text fill="WHITE" layoutX="70.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find the best place for your vehicle">
          <font>
             <Font name="Arial Bold" size="13.0" />
          </font>
@@ -65,8 +65,8 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button fx:id="updown_maps" layoutX="166.0" layoutY="-7.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="updown_maps" onAction="#handleUpdownMaps" />
-            <Button fx:id="dropdown_map" layoutX="166.0" layoutY="-7.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="dropdown_map" onAction="#handleDropdownMap" visible="false"/>
+            <Button fx:id="updown_maps" layoutX="166.0" layoutY="-7.0" mnemonicParsing="false" onAction="#handleUpdownMaps" prefHeight="30.0" prefWidth="30.0" styleClass="updown_maps" />
+            <Button fx:id="dropdown_map" layoutX="166.0" layoutY="-7.0" mnemonicParsing="false" onAction="#handleDropdownMap" prefHeight="30.0" prefWidth="30.0" styleClass="dropdown_map" visible="false" />
 
 
         </children>
@@ -74,6 +74,7 @@
       <TextField layoutX="30.0" layoutY="31.0" prefHeight="39.0" prefWidth="258.0" promptText="search by area" styleClass="se_box" />
       <Button layoutX="300.0" layoutY="37.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="33.0" style="-fx-background-color: #4299ca;" styleClass="se_butt" />
         <Pane fx:id="map_view" layoutX="7.0" layoutY="100.0" prefHeight="272.0" prefWidth="345.0" style="-fx-background-color: #111;" />
+      <Button fx:id="back_home" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" styleClass="back_button" text="Button" />
 
     </children>
 </Pane>

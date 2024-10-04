@@ -44,6 +44,9 @@ public class RentPageController {
     private Pane map_view;
     @FXML
     private Button dropdown_map;
+
+    @FXML
+    private Button back_home;
     @FXML
     private Pane rent_background;
     private boolean isRentBackgroundVisible = false;
@@ -57,6 +60,7 @@ public class RentPageController {
         map_view.setVisible(true);
         dropdown_map.setVisible(false);
         updown_maps.setVisible(true);
+        back_home.setOnAction(event -> backTohome());
     }
     @FXML
     private void handleCarButtonClick() {
@@ -128,6 +132,19 @@ public class RentPageController {
             updown_maps.setVisible(true);
 
             isRentBackgroundVisible = false;
+        }
+    }
+    private void backTohome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Home");
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+            Stage currentStage = (Stage) back_home.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

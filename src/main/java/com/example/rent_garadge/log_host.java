@@ -64,19 +64,11 @@ public class log_host {
     private void host() {
         try {
             // Host details loader
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("loginPage.fxml"));
-//            veichlePositionSelection.fxml
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("veichlePositionSelection.fxml"));
+
             Stage stage = new Stage();
             stage.setTitle("Garage Details");
             stage.setScene(new Scene(fxmlLoader.load()));
-
-            // Get the controller after loading the FXML
-            Login_controller controller = fxmlLoader.getController();
-
-            // Pass the selections to the new controller
-            controller.whichpage("veichlePositionSelection.fxml");
-
-
             stage.show(); // Show the new stage
 
             // Close current stage
