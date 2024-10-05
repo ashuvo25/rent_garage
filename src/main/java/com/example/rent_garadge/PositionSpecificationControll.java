@@ -58,7 +58,7 @@ public class PositionSpecificationControll {
             details.put("length", length);
             details.put("description", description.isEmpty() ? "Optional" : description);  // Default to "Optional" if empty
             System.out.println(details);
-            FirebaseConfig.datainput("garage_details",RentGaradge.user_id,details);
+//            FirebaseConfig.datainput("garage_details",RentGaradge.user_id,details);
             // Proceed to the next step
             openNextWindow(details);
         } else {
@@ -75,11 +75,11 @@ public class PositionSpecificationControll {
     private void openNextWindow(Map<String, Object> details) {
         try {
             // Load the FXML file and create a new scene
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginPanelUser.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("map.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
             // Get the controller after loading the FXML
-            LoginPanelUserControl controller = fxmlLoader.getController();
+            map_controller controller = fxmlLoader.getController();
 
             // Pass the selections to the new controller
             controller.garageDetails(details);

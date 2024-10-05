@@ -25,6 +25,9 @@ public class LocationTypeControl {
     private TextField city_id;
 
     @FXML
+    private TextField slot;
+
+    @FXML
     private TextField address_id;
 
     @FXML
@@ -51,12 +54,15 @@ public class LocationTypeControl {
         // Check if both text fields are filled
         boolean isCityFilled = !city_id.getText().trim().isEmpty();
         boolean isAddressFilled = !address_id.getText().trim().isEmpty();
+        boolean isslotFilled = !slot.getText().trim().isEmpty();
 
-        if (isSpaceSelected && isCityFilled && isAddressFilled) {
+
+        if (isSpaceSelected && isCityFilled && isAddressFilled && isslotFilled ) {
             // Proceed to the next page (implement your navigation logic here)
             // Add the city and address information to the map
             allgarageDetails.put("city", city_id.getText().trim());
             allgarageDetails.put("address", address_id.getText().trim());
+            allgarageDetails.put("slot",slot.getText().trim());
 
             // Include checkpoint data in the allgarageDetails map
             allgarageDetails.put("residential", residential_id.isSelected() ? "yes" : "no");

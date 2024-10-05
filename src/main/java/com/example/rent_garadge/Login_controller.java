@@ -32,6 +32,10 @@ public class Login_controller {
     @FXML
     private Label invalid; // The label for invalid login error messages
 
+
+    private String previousPage=""; // Store the previous page
+
+
     @FXML
     public void initialize() {
         // Initially hide the error messages
@@ -52,6 +56,7 @@ public class Login_controller {
                 String emailpass = FirebaseConfig.verifyEmailAndPassword("users", email, password);
 
                 if (emailpass.equals("signin")) {
+                     RentGaradge.user_id=email;
                     // Login success, open the home window
                     openHomeWindow();
                     startServer();
@@ -66,6 +71,10 @@ public class Login_controller {
                 }
             }
         });
+    }
+
+    public void whichpage(String s) {
+        previousPage=s;
     }
 
     private boolean validateLogin(String email, String password) {
@@ -116,14 +125,27 @@ public class Login_controller {
         }
     }
 
+
+
     @FXML
     private void openHomeWindow() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
+            FXMLLoader fxmlLoader;
+
+            if (previousPage == null || previousPage.isEmpty()) {
+                // If previousPage is empty, go to the home page
+                fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
+            } else {
+                // Otherwise, go to the previous page
+                fxmlLoader = new FXMLLoader(getClass().getResource(previousPage));
+            }
+
             Stage stage = new Stage();
-            stage.setTitle("Home");
+            stage.setTitle(previousPage.isEmpty() ? "Home Page" : "Previous Page");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
+
+            // Close the current login window
             Stage currentStage = (Stage) login.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {

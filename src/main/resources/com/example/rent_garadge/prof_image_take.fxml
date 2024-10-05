@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.text.Text?>
 
 <Pane prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #e7fff9;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.prof_image_takeController">
    <children>
@@ -18,7 +18,7 @@
          </children>
       </Pane>
       <Button fx:id="prof_img_next" layoutX="264.0" layoutY="409.0" mnemonicParsing="false" text="Next" />
-      <Text layoutX="87.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Your profile Image" wrappingWidth="234.9367218017578" />
-      <Button layoutX="301.0" layoutY="26.0" mnemonicParsing="false" text="Skip" />
+      <Button fx:id="skip" layoutX="301.0" layoutY="26.0" mnemonicParsing="false" text="Skip" />
+      <TextField fx:id="phone_number" layoutX="106.0" layoutY="238.0" promptText="Phone Number" />
    </children>
 </Pane>
