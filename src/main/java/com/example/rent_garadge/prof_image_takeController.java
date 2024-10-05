@@ -8,9 +8,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.opencv.core.Mat;
-import org.opencv.videoio.VideoCapture;
-import org.opencv.imgcodecs.Imgcodecs;
+//import org.opencv.core.Mat;
+//import org.opencv.videoio.VideoCapture;
+//import org.opencv.imgcodecs.Imgcodecs;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
@@ -51,7 +51,7 @@ public class prof_image_takeController {
 
         RentGaradge.garageDetails.put("owner_number",num);
         choose_photo.setOnAction(event -> handleChoosePhoto());
-        prof_img_next.setOnAction(event -> handleTakePhoto());
+//        prof_img_next.setOnAction(event -> handleTakePhoto());
         prof_img_next.setOnAction(event -> openNextWindow());
 
 
@@ -94,28 +94,28 @@ public class prof_image_takeController {
         }
     }
 
-    @FXML
-    private void handleTakePhoto() {
-        // Initialize the camera (requires OpenCV library)
-        System.loadLibrary(org.opencv.core.Core.NATIVE_LIBRARY_NAME); // Load the OpenCV native library
-
-        VideoCapture camera = new VideoCapture(0); // Open the default camera (0)
-
-        if (!camera.isOpened()) {
-            System.out.println("Error: Camera not accessible");
-            return;
-        }
-
-        Mat frame = new Mat();
-        if (camera.read(frame)) {
-            // Store the captured image in the `capturedImage` variable
-            Mat capturedImage = frame;
-            Imgcodecs.imwrite("captured_image.jpg", capturedImage); // Optionally save the image
-            System.out.println("Image captured successfully.");
-        }
-
-        camera.release(); // Release the camera
-    }
+//    @FXML
+//    private void handleTakePhoto() {
+//        // Initialize the camera (requires OpenCV library)
+//        System.loadLibrary(org.opencv.core.Core.NATIVE_LIBRARY_NAME); // Load the OpenCV native library
+//
+//        VideoCapture camera = new VideoCapture(0); // Open the default camera (0)
+//
+//        if (!camera.isOpened()) {
+//            System.out.println("Error: Camera not accessible");
+//            return;
+//        }
+//
+//        Mat frame = new Mat();
+//        if (camera.read(frame)) {
+//            // Store the captured image in the `capturedImage` variable
+//            Mat capturedImage = frame;
+//            Imgcodecs.imwrite("captured_image.jpg", capturedImage); // Optionally save the image
+//            System.out.println("Image captured successfully.");
+//        }
+//
+//        camera.release(); // Release the camera
+//    }
 
 
     private void openNextWindow() {

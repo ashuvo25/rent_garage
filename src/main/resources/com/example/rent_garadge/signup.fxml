@@ -47,7 +47,7 @@
                </font>
             </Label>
             <PasswordField fx:id="signup_confrom_password" layoutX="63.0" layoutY="308.0" prefHeight="25.0" prefWidth="231.0" promptText="At least 4 character" />
-            <TextField fx:id="signup_Username" layoutX="63.0" layoutY="202.0" prefHeight="25.0" prefWidth="231.0" promptText="Email" />
+            <TextField fx:id="signup_Username" layoutX="63.0" layoutY="202.0" prefHeight="25.0" prefWidth="231.0" promptText="Name" />
             <Button fx:id="login" layoutX="127.0" layoutY="350.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="89.0" stylesheets="@desing.css" text="Sign Up -&gt;" textFill="#050404">
                <font>
                   <Font name="Monospaced Bold" size="12.0" />
@@ -104,7 +104,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <TextField fx:id="signup_email" layoutX="63.0" layoutY="154.0" prefHeight="25.0" prefWidth="231.0" promptText="Name" />
+            <TextField fx:id="signup_email" layoutX="63.0" layoutY="154.0" prefHeight="25.0" prefWidth="231.0" promptText="Email" />
             <Label fx:id="signup_name_text" layoutX="66.0" layoutY="184.0" text="Name" textFill="#0000008a">
                <font>
                   <Font name="System Bold" size="14.0" />
