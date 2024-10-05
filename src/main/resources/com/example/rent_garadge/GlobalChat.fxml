@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #f1f1f1;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.ChatController">
+    <children>
+        <!-- Chat input pane with TextField and Send Button -->
+        <Pane layoutX="10.0" layoutY="436.0" prefHeight="50.0" prefWidth="344.0">
+            <children>
+                <!-- Text field to input message -->
+                <TextField fx:id="messageField" layoutX="24.0" layoutY="8.0" prefHeight="25.0" prefWidth="199.0" styleClass="price-input" />
+
+                <!-- Button to send message -->
+                <Button fx:id="sendButton" layoutX="280.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #f1f1f1;" styleClass="sent_message" text="Send" />
+            </children>
+        </Pane>
+
+        <!-- Dropdown for selecting servers (port 8080 by default) -->
+        <ComboBox fx:id="dropdownMenu" layoutX="130.0" layoutY="14.0" prefWidth="150.0" promptText="Servers - 8080" styleClass="servers_butt" />
+
+        <!-- Back button to go to the previous screen -->
+        <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #f1f1f1;" styleClass="back_button" text="Back" />
+
+        <!-- ListView to display messages -->
+        <ListView fx:id="messageListView" layoutX="14.0" layoutY="70.0" prefHeight="366.0" prefWidth="330.0" />
+    </children>
+</Pane>
