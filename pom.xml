@@ -16,6 +16,13 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.openpnp</groupId>
+            <artifactId>opencv</artifactId>
+            <version>LATEST</version> <!-- Change version based on the latest available -->
+        </dependency>
+
+
 
         <dependency>
             <groupId>com.google.firebase</groupId>

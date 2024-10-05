@@ -107,7 +107,7 @@ public class PropPageController { // Made the class concrete
     public void initialize() {
         String user_id = RentGaradge.user_id;  // Assuming you have user_id stored somewhere
         if(RentGaradge.UserData==null){
-            RentGaradge.UserData = FirebaseConfig.getUserData("users", "a@g.com");  // Retrieve user data from Firebase
+            RentGaradge.UserData = FirebaseConfig.getUserData("users", user_id);  // Retrieve user data from Firebase
         }
         Map<String, Object> UserData=RentGaradge.UserData;
         // Check if UserData is not null and has the expected keys

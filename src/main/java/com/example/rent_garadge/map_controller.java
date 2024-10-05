@@ -12,6 +12,7 @@ import jdk.swing.interop.SwingInterOpUtils;
 import netscape.javascript.JSObject;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 public class map_controller {
@@ -59,19 +60,29 @@ public class map_controller {
         this.Longitude = lon;
         details.put("Latitude", this.Latitude );
         details.put("Longitude", this.Longitude);
-        String result= FirebaseConfig.datainput("garage_details",RentGaradge.user_id,details);
-        System.out.println(result);
-        System.out.println(details);
-        FirebaseConfig.datainput("garage_details",RentGaradge.user_id,details);
-        System.out.println("Latitude: " + Latitude + ", Longitude: " + Longitude);
 
-        openNextWindow(details);
+        // Assuming garagedetails contains an integer "slot"
+        int num = Integer.parseInt(details.get("slot")+""); // Extract the number of slots
+        // Initialize the slotNum map
+        Map<String, Object> slotNum = new HashMap<>();
+        // Iterate over the number and add dynamic keys
+        for (int i = 1; i <= num; i++) {
+            String key = "slot" + i;  // Create keys like slot1, slot2, slot3, etc.
+            slotNum.put(key, true);    // Add to the map with value true
+        }
+        String value=FirebaseConfig.datainput("garage_slot",RentGaradge.user_id,slotNum);
+        System.out.println(value);
+        RentGaradge.garageDetails=details;
+
+        System.out.println(details);
+
+        openNextWindow();
     }
 
-    private void openNextWindow(Map<String, Object> details) {
+    private void openNextWindow() {
         try {
             // Load the FXML file and create a new scene
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Homes.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Prof_image_take.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
 //            // Get the controller after loading the FXML

@@ -142,7 +142,12 @@ public class FirebaseConfig {
 
             // Iterate through the documents and add their data to the list
             for (DocumentSnapshot document : querySnapshot.getDocuments()) {
-                garageList.add(document.getData());
+                // Create a new map for each garage detail, including the document ID
+                Map<String, Object> garageDetail = new HashMap<>(document.getData());
+                garageDetail.put("email", document.getId()); // Add the document ID
+
+                // Add the garage detail map to the list
+                garageList.add(garageDetail);
             }
 
         } catch (Exception e) {
@@ -195,6 +200,31 @@ public class FirebaseConfig {
             return "signup_error";
         }
     }
+
+    public static String updateFieldInDocument(String collection, String document, String fieldName, Object fieldValue) {
+        firestore_connection(); // Ensure Firestore connection is initialized
+        try {
+            // Get a reference to the specific document
+            DocumentReference docRef = db.collection(collection).document(document);
+
+            // Create a map containing the field name and its updated value
+            Map<String, Object> updates = new HashMap<>();
+            updates.put(fieldName, fieldValue);
+
+            // Asynchronously update the field in the document
+            ApiFuture<WriteResult> result = docRef.update(updates);
+
+            // Wait for the update to complete and return success if it worked
+            WriteResult writeResult = result.get();
+            System.out.println("Field updated at: " + writeResult.getUpdateTime());
+            return "field_updated"; // Indicate that the field was successfully updated
+
+        } catch (Exception e) {
+            System.out.println("Error updating field: " + e.getMessage());
+            return "update_error"; // Indicate that there was an error during the update
+        }
+    }
+
 
 
 

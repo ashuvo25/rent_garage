@@ -35,5 +35,11 @@
       <CheckBox fx:id="residential_id" layoutX="60.0" layoutY="164.0" mnemonicParsing="false" text="Residential" />
       <CheckBox fx:id="commercial_id" layoutX="60.0" layoutY="197.0" mnemonicParsing="false" text="Commercial" />
       <Button fx:id="next_1" layoutX="182.0" layoutY="439.0" mnemonicParsing="false" text="Next" />
+      <TextField fx:id="slot" layoutX="239.0" layoutY="288.0" promptText="Input Slot Number" />
+      <Text layoutX="219.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How many Slot DO you have" wrappingWidth="189.63671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

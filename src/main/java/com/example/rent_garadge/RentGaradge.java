@@ -14,6 +14,9 @@ import java.util.Map;
 public class RentGaradge extends Application {
      static String user_id;
     static Map<String, Object> UserData;
+    static Map<String, Object> garageDetails;
+
+
 
     @Override
     //shuvo
@@ -22,7 +25,7 @@ public class RentGaradge extends Application {
 //
 //        stage.initStyle(StageStyle.UNDECORATED);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(RentGaradge.class.getResource("homes.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(RentGaradge.class.getResource("become.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 360, 500);
 
 //        FirebaseConfig.data();

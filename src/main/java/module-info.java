@@ -25,6 +25,7 @@ module com.example.rent_garadge {
     requires javafx.web;
     requires jdk.jsobject;
     requires jdk.unsupported.desktop;
+    requires opencv;
 //    requires com.google.api.client.extensions.java6.auth;
 //    requires com.google.api.client.json.gson;
 
