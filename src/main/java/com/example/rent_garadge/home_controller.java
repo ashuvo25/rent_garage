@@ -58,7 +58,23 @@ public class home_controller {
 
           home_btn4.setOnAction(event -> profileFunct());
           home_btn2.setOnAction(event -> rent_page());
+          home_btn1.setOnAction(event -> globalChat());
 //          hideHoverPane();
+    }
+
+    private void globalChat() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GlobalChat.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Profile");
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+            Stage currentStage = (Stage) home_btn1.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
     }
 
     private void profileFunct() {

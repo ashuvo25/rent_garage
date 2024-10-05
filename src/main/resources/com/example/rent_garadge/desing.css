@@ -173,7 +173,7 @@ AnchorPane {
 .home_btn {
     -fx-background-image: url('Icons/home-32.png');
 }.map_btn {
-    -fx-background-image: url('Icons/map-32.png');
+    -fx-background-image: url('Icons/global-chat-32.png');
 }.frn_btn {
     -fx-background-image: url('Icons/notification-32.png');
 }
@@ -466,3 +466,154 @@ AnchorPane {
     -fx-background-image: url('Icons/up-arrow-30.png');
     -fx-background-color: rgba(255, 255, 255, 0);
 }
+
+.sent_massage{
+    -fx-background-image: url('Icons/sent-20.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+.main-container {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e3e3e3);
+    -fx-padding: 20;
+}
+
+/* Price offering section */
+.price-offering-page {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15px;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+}
+
+/* Title */
+.title-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 2, 0, 1, 1);
+}
+
+/* Input field */
+.price-input {
+    -fx-pref-width: 240px;
+    -fx-padding: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 2px;
+    -fx-background-color: #fafafa;
+    -fx-font-size: 16px;
+}
+
+/* Input field - focus effect */
+.price-input:focused {
+    -fx-border-color: #4CAF50;
+    -fx-background-color: #ffffff;
+}
+
+/* Submit button */
+.submit-button {
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-padding: 12px;
+    -fx-font-size: 16px;
+    -fx-pref-width: 220px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+/* Hover effect on submit button */
+.submit-button:hover {
+    -fx-background-color: #45a049;
+}
+
+/* Validation label */
+.validation-label {
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+}
+/* General styling for the whole pane */
+.main-pane {
+    -fx-background-color: #e6e6e6;
+    -fx-border-radius: 10;
+    -fx-padding: 15;
+}
+
+/* TextField for message input */
+.message-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bfbfbf;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Send Button styling */
+.send-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+}
+
+.send-button:hover {
+    -fx-background-color: #45a049;
+}
+
+/* Dropdown Menu for server selection */
+.server-dropdown {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.pane {
+    -fx-background-color: #f1f1f1;
+}
+
+/* Style for the message input TextField */
+.price-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-prompt-text-fill: #999999; /* Light gray prompt text */
+}
+
+/* Style for the Send Button */
+.sent_message {
+    -fx-background-color: #28a745; /* Green color for send button */
+    -fx-border-color: #28a745;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #000000; /* White text */
+    -fx-font-weight: bold;
+    -fx-cursor: hand; /* Hand cursor on hover */
+}
+
+.sent_message:hover {
+    -fx-background-color: #218838; /* Darker green on hover */
+}
+
+/* Style for the ComboBox (Servers dropdown) */
+.servers_butt {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-prompt-text-fill: #666666; /* Slightly darker gray for dropdown prompt */
+}
+
+.servers_butt:hover {
+    -fx-border-color: #28a745; /* Green border on hover */
+}
+
+

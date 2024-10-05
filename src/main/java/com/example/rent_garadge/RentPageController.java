@@ -108,6 +108,9 @@ public class RentPageController {
 
     @FXML
     private Button dropdown_map;
+
+    @FXML
+    private Button back_home;
     @FXML
     private Pane rent_background;
     private List<Map<String, Object>> getAllGarageDetails;
@@ -141,6 +144,7 @@ public class RentPageController {
         map_view.setVisible(true);
         dropdown_map.setVisible(false);
         updown_maps.setVisible(true);
+        back_home.setOnAction(event -> backTohome());
 
         getAllGarageDetails = FirebaseConfig.getAllGarageDetails();
         System.out.println(getAllGarageDetails);
@@ -160,13 +164,11 @@ public class RentPageController {
             }
         });
     }
-
     @FXML
     private void handleCarButtonClick() {
         car_buttons.setStyle("-fx-background-color: #5c5cba;");
         bike_buttons.setStyle("-fx-background-color: #fdfeff;");
     }
-
     @FXML
     private void handleBikeButtonClick() {
         bike_buttons.setStyle("-fx-background-color: #5c5cba;");
@@ -430,20 +432,22 @@ public class RentPageController {
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
+
         }
     }
 
-    private void homescreen() {
+    private  void  homescreen(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Home");
+            stage.setTitle("Profile");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
             Stage currentStage = (Stage) home_btn.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
+
         }
     }
 
@@ -465,6 +469,7 @@ public class RentPageController {
     @FXML
     private void handleDropdownMap() {
         if (isRentBackgroundVisible) {
+
             TranslateTransition transitionDown = new TranslateTransition(Duration.millis(500), rent_background);
             transitionDown.setToY(-30);
             transitionDown.play();
@@ -475,10 +480,17 @@ public class RentPageController {
             isRentBackgroundVisible = false;
         }
     }
-
-    // Method to be called from JavaScript
-    public void updateLocation(String latitude, String longitude) {
-        System.out.println("Pinned Location - Latitude: " + latitude + ", Longitude: " + longitude);
-        // You can add any additional logic to handle the pinned location here
+    private void backTohome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Home");
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+            Stage currentStage = (Stage) back_home.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -8,17 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #e7fff9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.LocationTypeControl">
+<AnchorPane prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #e7fff9;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nothing">
    <children>
-      <BorderPane prefHeight="70.0" prefWidth="415.0" style="-fx-background-color: #005942;">
-         <center>
-            <Text fill="#f3efef" strokeType="OUTSIDE" strokeWidth="0.0" text="Park My Garage" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="Algerian" size="30.0" />
-               </font>
-            </Text>
-         </center>
-      </BorderPane>
+      <BorderPane prefHeight="70.0" prefWidth="0.0" style="-fx-background-color: #005942;" />
       <Text layoutX="18.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Your Location." wrappingWidth="189.63671875">
          <font>
             <Font name="Britannic Bold" size="20.0" />
@@ -36,14 +28,5 @@
       <CheckBox layoutX="60.0" layoutY="197.0" mnemonicParsing="false" text="Commercial" />
       <Button layoutX="182.0" layoutY="439.0" mnemonicParsing="false" text="Next" />
       <Button layoutX="31.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: #e7fff9;" styleClass="back_button" stylesheets="@desing.css" />
-      <CheckBox fx:id="residential_id" layoutX="60.0" layoutY="164.0" mnemonicParsing="false" text="Residential" />
-      <CheckBox fx:id="commercial_id" layoutX="60.0" layoutY="197.0" mnemonicParsing="false" text="Commercial" />
-      <Button fx:id="next_1" layoutX="182.0" layoutY="439.0" mnemonicParsing="false" text="Next" />
-      <TextField fx:id="slot" layoutX="239.0" layoutY="288.0" promptText="Input Slot Number" />
-      <Text layoutX="219.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How many Slot DO you have" wrappingWidth="189.63671875">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Text>
    </children>
 </AnchorPane>

@@ -11,12 +11,14 @@ import java.io.IOException;
 import java.util.Map;
 
 
+
 public class RentGaradge extends Application {
      static String user_id;
     static Map<String, Object> UserData;
     static Map<String, Object> garageDetails;
 
 
+    public static String user_id;
 
     @Override
     //shuvo

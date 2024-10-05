@@ -7,6 +7,8 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 public class Login_controller {
 
@@ -57,6 +59,7 @@ public class Login_controller {
                      RentGaradge.user_id=email;
                     // Login success, open the home window
                     openHomeWindow();
+                    startServer();
                 } else if (emailpass.equals("incorrect_pass")) {
                     password_notification.setText("Incorrect password");
                     password_notification.setVisible(true);
@@ -122,8 +125,6 @@ public class Login_controller {
         }
     }
 
-
-
     @FXML
     private void openHomeWindow() {
         try {
@@ -138,11 +139,9 @@ public class Login_controller {
             }
 
             Stage stage = new Stage();
-            stage.setTitle(previousPage.isEmpty() ? "Home Page" : "Previous Page");
+            stage.setTitle("Home");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
-
-            // Close the current login window
             Stage currentStage = (Stage) login.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
@@ -150,6 +149,47 @@ public class Login_controller {
         }
     }
 
+    private void startServer() {
+        // Start server in a new thread
+        new Thread(() -> {
+            try (ServerSocket serverSocket = new ServerSocket(8080)) {
+                System.out.println("Server started on port 8080");
 
+                while (true) {
+                    Socket clientSocket = serverSocket.accept(); // Accept new client connections
+                    System.out.println("New client connected: " + clientSocket.getInetAddress());
+                    // Handle each client in a new thread (for scalability)
+                    new Thread(new ClientHandler(clientSocket)).start();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
 
+    // Inner class to handle each client connection
+    private class ClientHandler implements Runnable {
+        private Socket clientSocket;
+
+        public ClientHandler(Socket clientSocket) {
+            this.clientSocket = clientSocket;
+        }
+
+        @Override
+        public void run() {
+            try {
+                // Logic to handle client-server communication
+                System.out.println("Handling client at " + clientSocket.getInetAddress());
+                // Example: read from client, broadcast messages, etc.
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }
