@@ -1,11 +1,8 @@
 package com.example.rent_garadge;
 
-
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 import javax.swing.*;
 import java.io.BufferedReader;
@@ -14,32 +11,17 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class Chat extends Application {
+public class ChatAdnan {
+    @FXML
+    private TextArea textArea;
+
+    @FXML
+    private TextField inputField;
+
     private PrintWriter out;
     private BufferedReader in;
 
-    private TextArea textArea;
-    private TextField inputField;
-
-    @Override
-    public void start(Stage primaryStage) {
-        primaryStage.setTitle("Chat Client");
-
-        textArea = new TextArea();
-        textArea.setEditable(false);
-
-        inputField = new TextField();
-        inputField.setPromptText("Type your message...");
-
-        Button sendButton = new Button("Send");
-        sendButton.setOnAction(e -> sendMessage());
-
-        VBox vbox = new VBox(textArea, inputField, sendButton);
-        Scene scene = new Scene(vbox, 400, 300);
-
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
+    public void initialize() {
         // Replace "localhost" with the server's IP address on the same Wi-Fi network
         String serverIp = JOptionPane.showInputDialog("Enter the server's IP address:");
 
@@ -61,7 +43,7 @@ public class Chat extends Application {
             }).start();
 
             // Prompt for the client's name
-            String name = JOptionPane.showInputDialog("Enter your name:");
+            String name = RentGaradge.user_id;
             out.println(name); // Send the name to the server
 
         } catch (IOException e) {
@@ -69,15 +51,12 @@ public class Chat extends Application {
         }
     }
 
-    private void sendMessage() {
+    @FXML
+    private void handleSendButton() {
         String message = inputField.getText();
         if (!message.isEmpty()) {
             out.println(message);
             inputField.clear();
         }
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

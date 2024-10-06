@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+//import org.opencv.core.Core;
 //import org.opencv.core.Mat;
 //import org.opencv.videoio.VideoCapture;
 //import org.opencv.imgcodecs.Imgcodecs;
@@ -51,7 +52,6 @@ public class prof_image_takeController {
 
         RentGaradge.garageDetails.put("owner_number",num);
         choose_photo.setOnAction(event -> handleChoosePhoto());
-//        prof_img_next.setOnAction(event -> handleTakePhoto());
         prof_img_next.setOnAction(event -> openNextWindow());
 
 
@@ -90,6 +90,12 @@ public class prof_image_takeController {
             // You now have the selected file
             String path="" + selectedImageFile.getAbsolutePath();
             RentGaradge.garageDetails.put("image_url",path);
+            Map<String,Object> imageset = Map.of();
+            imageset.put("image_url",path);
+            String val=FirebaseConfig.datainput("users",RentGaradge.user_id,imageset);
+            System.out.println(val);
+
+
             System.out.println(RentGaradge.garageDetails);
         }
     }
@@ -97,7 +103,7 @@ public class prof_image_takeController {
 //    @FXML
 //    private void handleTakePhoto() {
 //        // Initialize the camera (requires OpenCV library)
-//        System.loadLibrary(org.opencv.core.Core.NATIVE_LIBRARY_NAME); // Load the OpenCV native library
+//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME); // Load the OpenCV native library
 //
 //        VideoCapture camera = new VideoCapture(0); // Open the default camera (0)
 //

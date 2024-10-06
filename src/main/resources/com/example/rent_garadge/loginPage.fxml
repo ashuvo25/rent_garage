@@ -97,7 +97,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <TextField fx:id="input_email" layoutX="63.0" layoutY="165.0" prefHeight="25.0" prefWidth="231.0" promptText="Email" />
+            <TextField fx:id="input_email" layoutX="63.0" layoutY="165.0" prefHeight="25.0" prefWidth="231.0" promptText="Name" />
             <Label layoutX="66.0" layoutY="197.0" text="Password" textFill="#00000089">
                <font>
                   <Font name="System Bold" size="14.0" />

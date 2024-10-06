@@ -23,6 +23,8 @@ public class bookingPlanController {
 
     @FXML
     private DatePicker date; // Date picker
+    @FXML
+    private Text area;
 
     @FXML
     private CheckBox parkNowCheckBox; // Checkbox for immediate parking
@@ -64,8 +66,20 @@ public class bookingPlanController {
 
     public void garageDetails(Map<String, Object> garageDetails) {
         this.garageDetails=garageDetails;
-        System.out.println(garageDetails.get("email")+"HI");
+        System.out.println(garageDetails);
+        String address = garageDetails.get("address")+"";
+        String city = garageDetails.get("city")+"";
+
+// Make the first character uppercase for both address and city
+        String formattedAddress = address.substring(0, 1).toUpperCase() + address.substring(1);
+        String formattedCity = city.substring(0, 1).toUpperCase() + city.substring(1);
+
+// Set the text in the area
+        area.setText(formattedAddress + "," + formattedCity);
+
         slot=FirebaseConfig.getUserData("garage_slot",garageDetails.get("email")+"");
+
+
         rentDetails=garageDetails;
         // Set slot availability (true or false from the slot data map)
         System.out.println(slot);
@@ -200,6 +214,8 @@ public class bookingPlanController {
         rentDetails.put("slot", slot);
         rentDetails.put("garageowner",garageDetails.get("email"));
         rentDetails.put("renter",RentGaradge.user_id);
+        rentDetails.put("address",garageDetails.get("address"));
+        rentDetails.put("city",garageDetails.get("city"));
         Random random = new Random();
         int randomValue = Math.abs(random.nextInt()); // Ensures the value is non-negative
         rentDetails.put("random", randomValue * 500 + "");
@@ -213,6 +229,7 @@ public class bookingPlanController {
 //        System.out.println("Selected Slot: " + slot);
 
         // Proceed to the next window
+        System.out.println(rentDetails);
         openNextWindow(rentDetails);
     }
 

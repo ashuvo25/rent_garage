@@ -34,14 +34,11 @@ public class PropPageController { // Made the class concrete
     @FXML
     private Pane details_pane;
 
-    @FXML
-    private Text garage_registration_no;
+
 
     @FXML
     private Text owner_gmail1;
 
-    @FXML
-    private Text owner_gmail11;
 
     @FXML
     private Text owner_location;
@@ -112,14 +109,12 @@ public class PropPageController { // Made the class concrete
         Map<String, Object> UserData=RentGaradge.UserData;
         // Check if UserData is not null and has the expected keys
         if (UserData != null) {
-            // Set the garage registration number
-            garage_registration_no.setText((String) UserData.get("garage_registration_no")); // Adjust the key as per your database structure
 
             // Set the owner's name
             owner_name.setText((String) UserData.get("username")); // Adjust the key as per your database structure
 
             // Set the owner's phone number
-            owner_phone_number.setText((String) UserData.get("owner_phone_number")); // Adjust the key as per your database structure
+            owner_phone_number.setText((String) UserData.get("number")); // Adjust the key as per your database structure
 
             // Set the owner's email
             owner_gmail1.setText((String) UserData.get("email")); // Adjust the key as per your database structure
@@ -128,7 +123,7 @@ public class PropPageController { // Made the class concrete
             owner_location.setText((String) UserData.get("owner_location")); // Adjust the key as per your database structure
 
             // Optionally set profile image
-            String profileImageUrl = (String) UserData.get("profile_image_url"); // Adjust the key as per your database structure
+            String profileImageUrl = (String) UserData.get("image_url"); // Adjust the key as per your database structure
             if (profileImageUrl != null) {
                 // Assuming you have a method to load an image and set it to the Circle
                 Image image = new Image(profileImageUrl);

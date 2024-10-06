@@ -55,6 +55,7 @@
       <Button layoutX="300.0" layoutY="37.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="33.0" style="-fx-background-color: #4299ca;" styleClass="se_butt" />
       <WebView fx:id="map_view" layoutX="8.0" layoutY="83.0" prefHeight="324.0" prefWidth="341.0" />
       <HBox layoutX="68.0" layoutY="277.0" prefHeight="74.0" prefWidth="306.0" />
+      <Button layoutY="8.0" mnemonicParsing="false" styleClass="back_button" text="Button" />
 
     </children>
 </Pane>

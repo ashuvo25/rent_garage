@@ -85,7 +85,7 @@
         <TextArea layoutY="32.0" prefHeight="73.0" prefWidth="360.0" text="     &#10;                                   &#10;                          " />
         <Text fill="#ff0808" layoutX="45.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      T&amp;C applies for 30 minutes of the city program" />
         <Text fx:id="current_date" fill="#4643ff" layoutX="119.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="   10 October 2024" />
-        <Text layoutX="94.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="       Road-4, Gulshan, Dhaka" />
+        <Text fx:id="area" layoutX="94.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="       Road-4, Gulshan, Dhaka" />
         <DatePicker fx:id="date" layoutX="32.0" layoutY="259.0" prefHeight="34.0" prefWidth="150.0" promptText="10/03/2024" />
         <Button fx:id="BackButton" layoutX="13.0" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" text="BookingPlan" />
         <ImageView fx:id="back" fitHeight="30.0" fitWidth="24.0" layoutX="12.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">

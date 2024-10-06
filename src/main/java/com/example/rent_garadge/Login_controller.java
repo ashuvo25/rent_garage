@@ -125,8 +125,6 @@ public class Login_controller {
         }
     }
 
-
-
     @FXML
     private void openHomeWindow() {
         try {
@@ -141,11 +139,9 @@ public class Login_controller {
             }
 
             Stage stage = new Stage();
-            stage.setTitle(previousPage.isEmpty() ? "Home Page" : "Previous Page");
+            stage.setTitle("Home");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
-
-            // Close the current login window
             Stage currentStage = (Stage) login.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {

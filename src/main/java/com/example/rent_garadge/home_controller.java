@@ -64,18 +64,18 @@ public class home_controller {
 
     private void globalChat() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GlobalChat.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Chat.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Global Chat");
+            stage.setTitle("Profile");
             stage.setScene(new Scene(fxmlLoader.load()));
             stage.show();
             Stage currentStage = (Stage) home_btn1.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
+
         }
     }
-
 
     private void profileFunct() {
         try {

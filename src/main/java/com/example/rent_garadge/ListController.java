@@ -32,11 +32,30 @@ public class ListController {
     @FXML
     private Button visit_garage;
 
+    Map<String, Object> slotT;
+
 //    Map<String, Object> garageDetails;
 
     // Method to set data for a single garage
     public void setGarageDetails(Map<String, Object> garageDetails) {
+        try {
+            slotT = FirebaseConfig.getUserData("garage_slot", garageDetails.get("email") + "");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        int trueCount = 0;
+
+// Iterate through the entries of the map
+        for (Map.Entry<String, Object> entry : slotT.entrySet()) {
+            // Check if the value is a Boolean and true
+            if (entry.getValue() instanceof Boolean && (Boolean) entry.getValue()) {
+                trueCount++;
+            }
+        }
+
+
         visit_garage.setOnAction(event -> {
+
             // Load the FXML file and create a new scene
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BookingPlan.fxml"));
             Scene scene = null;
@@ -63,11 +82,11 @@ public class ListController {
             currentStage.close();
         });
         // Setting values to the UI components
-        garage_address.setText( garageDetails.get("address")+"");
+        garage_address.setText( garageDetails.get("address")+","+garageDetails.get("city"));
 
-        fare.setText("9");
+        fare.setText("Rent: 50tk");
         distance_id.setText(garageDetails.get("distance")+" km");
-        slot.setText("5");
+        slot.setText(trueCount+"");
 
 
     }

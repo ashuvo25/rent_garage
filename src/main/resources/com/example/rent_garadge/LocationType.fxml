@@ -32,6 +32,10 @@
             <Font name="Britannic Bold" size="20.0" />
          </font>
       </Text>
+      <CheckBox layoutX="60.0" layoutY="164.0" mnemonicParsing="false" text="Residential" />
+      <CheckBox layoutX="60.0" layoutY="197.0" mnemonicParsing="false" text="Commercial" />
+      <Button layoutX="182.0" layoutY="439.0" mnemonicParsing="false" text="Next" />
+      <Button layoutX="31.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: #e7fff9;" styleClass="back_button" stylesheets="@desing.css" />
       <CheckBox fx:id="residential_id" layoutX="60.0" layoutY="164.0" mnemonicParsing="false" text="Residential" />
       <CheckBox fx:id="commercial_id" layoutX="60.0" layoutY="197.0" mnemonicParsing="false" text="Commercial" />
       <Button fx:id="next_1" layoutX="182.0" layoutY="439.0" mnemonicParsing="false" text="Next" />

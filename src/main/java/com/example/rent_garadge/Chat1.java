@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class Chat extends Application {
+public class Chat1 extends Application {
     private PrintWriter out;
     private BufferedReader in;
 

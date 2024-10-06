@@ -1,5 +1,6 @@
 package com.example.rent_garadge;
 
+import java.util.*;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -115,26 +116,31 @@ public class RentPageController {
     private List<Map<String, Object>> getAllGarageDetails;
     private boolean isRentBackgroundVisible = false;
 
+
+
     private void populateGarageList(List<Map<String, Object>> garageDetailsList) {
+
         for (Map<String, Object> garageDetails : garageDetailsList) {
             System.out.println(garageDetails.get("address"));
 
-            try{
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("list.fxml"));
-                HBox hBox = fxmlLoader.load();
-                ListController listController = fxmlLoader.getController();
-                listController.setGarageDetails(garageDetails);
-                infoContainer.getChildren().add(hBox);
-            }catch (Exception e){
-                System.out.println(e.getMessage());
-            }
+
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+                    fxmlLoader.setLocation(getClass().getResource("list.fxml"));
+                    HBox hBox = fxmlLoader.load();
+                    ListController listController = fxmlLoader.getController();
+                    listController.setGarageDetails(garageDetails);
+                    infoContainer.getChildren().add(hBox);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+
 
         }
     }
 
     @FXML
-    private  void initialize() {
+    private void initialize() {
         bike_buttons.setOnAction(event -> handleBikeButtonClick());
         car_buttons.setOnAction(event -> handleCarButtonClick());
         home_btn4.setOnAction(event -> profileFunct());
@@ -143,9 +149,9 @@ public class RentPageController {
         map_view.setVisible(true);
         dropdown_map.setVisible(false);
         updown_maps.setVisible(true);
-        back_home.setOnAction(event -> backTohome());
+//        back_home.setOnAction(event -> backTohome());
 
-        getAllGarageDetails = FirebaseConfig.getAllGarageDetails();
+        getAllGarageDetails = FirebaseConfig.getAllGarageDetails("garage_details");
         System.out.println(getAllGarageDetails);
         System.out.println(getAllGarageDetails.get(0).getClass());
 
@@ -168,7 +174,6 @@ public class RentPageController {
         car_buttons.setStyle("-fx-background-color: #5c5cba;");
         bike_buttons.setStyle("-fx-background-color: #fdfeff;");
     }
-
     @FXML
     private void handleBikeButtonClick() {
         bike_buttons.setStyle("-fx-background-color: #5c5cba;");
@@ -303,7 +308,7 @@ public class RentPageController {
                     function loadMapScenario() {
                         map = new Microsoft.Maps.Map(document.getElementById('map'), {
                             credentials: 'AkcKTkaCZKKAdrUrSATJWbV7xVleTJ1HtvHxp04_PKIVO1w5SSJGokoMWimJITcj',
-                            zoom: 10,
+                            zoom: 20,
                             center: new Microsoft.Maps.Location(0, 0)
                         });
 
@@ -436,7 +441,7 @@ public class RentPageController {
         }
     }
 
-    private void homescreen() {
+    private  void  homescreen(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
             Stage stage = new Stage();
@@ -479,12 +484,6 @@ public class RentPageController {
 
             isRentBackgroundVisible = false;
         }
-    }
-
-    // Method to be called from JavaScript
-    public void updateLocation(String latitude, String longitude) {
-        System.out.println("Pinned Location - Latitude: " + latitude + ", Longitude: " + longitude);
-        // You can add any additional logic to handle the pinned location here
     }
     private void backTohome() {
         try {
