@@ -156,8 +156,8 @@ public class Login_controller {
     private void startServer() {
         // Start server in a new thread
         new Thread(() -> {
-            try (ServerSocket serverSocket = new ServerSocket(8080)) {
-                System.out.println("Server started on port 8080");
+            try (ServerSocket serverSocket = new ServerSocket(8081)) {
+                System.out.println("Server started on port 8081");
 
                 while (true) {
                     Socket clientSocket = serverSocket.accept(); // Accept new client connections

@@ -28,7 +28,7 @@ public class ChatController {
     private TextField messageField;
 
     @FXML
-    private ListView<String> messageListView; // Changed to String to store messages
+    private ListView<String> messageListView;
 
     @FXML
     private Button sendButton;
@@ -37,14 +37,14 @@ public class ChatController {
     private BufferedReader in;
     private Socket socket;
     Map<String, Object> UserData=RentGaradge.UserData;
-    // Define the username for the current client
-    private String username = user_id; // Set this as desired
+
+    private String username = user_id;
     private  String owner_name ;
     public void initialize() {
-        // Start the socket connection when the controller is initialized
+
         startConnection();
         startRealTimeFileWatcher("database.txt");
-        // Set up the action for the send button
+
         sendButton.setOnAction(event -> sendNewMessage());
         backButton.setOnAction(event -> backTohome());
 
@@ -60,7 +60,7 @@ public class ChatController {
                 if (empty || message == null) {
                     setGraphic(null);
                     setText(null);
-                    setStyle(""); // Clear styling for empty cells
+                    setStyle("");
                 } else {
                     // Create a vertical box to hold the sender and message text
                     VBox vBox = new VBox();
@@ -86,7 +86,7 @@ public class ChatController {
                         vBox.setStyle("-fx-alignment: CENTER-LEFT; -fx-background-color: #d1e7dd; -fx-padding: 10px; -fx-border-radius: 10px;");
                     } else {
                         // Other user's message (align right)
-                        vBox.setStyle("-fx-alignment: CENTER-RIGHT; -fx-background-color: #f8d7da; -fx-padding: 10px; -fx-border-radius: 10px;");
+                        vBox.setStyle("-fx-alignment: CENTER-RIGHT; -fx-background-color: #99c4c8; -fx-padding: 10px; -fx-border-radius: 10px;");
                         vBox.setAlignment(Pos.CENTER_RIGHT);
                     }
 
@@ -106,7 +106,7 @@ public class ChatController {
         }
 
         try {
-            socket = new Socket("127.0.0.1", 8080);
+            socket = new Socket("127.0.0.11", 8081);
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
@@ -159,7 +159,7 @@ public class ChatController {
 
                                 // Limit the ListView to the last 20 messages
                                 if (messages.size() > 20) {
-                                    messages.remove(0); // Remove the oldest message
+                                    messages.remove(0);
                                 }
 
                                 // Auto-scroll to the bottom when new messages arrive
