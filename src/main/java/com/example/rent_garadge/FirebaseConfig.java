@@ -128,13 +128,13 @@ public class FirebaseConfig {
 
 
 
-    public static List<Map<String, Object>> getAllGarageDetails() {
+    public static List<Map<String, Object>> getAllGarageDetails(String doc) {
         firestore_connection(); // Ensure Firestore connection is initialized
         List<Map<String, Object>> garageList = new ArrayList<>();
 
         try {
             // Reference the 'garage_details' collection
-            CollectionReference garagesRef = db.collection("garage_details");
+            CollectionReference garagesRef = db.collection(doc);
 
             // Asynchronously retrieve all documents in the collection
             ApiFuture<QuerySnapshot> future = garagesRef.get();

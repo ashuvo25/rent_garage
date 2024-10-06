@@ -116,20 +116,25 @@ public class RentPageController {
     private List<Map<String, Object>> getAllGarageDetails;
     private boolean isRentBackgroundVisible = false;
 
+
+
     private void populateGarageList(List<Map<String, Object>> garageDetailsList) {
+
         for (Map<String, Object> garageDetails : garageDetailsList) {
             System.out.println(garageDetails.get("address"));
 
-            try{
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("list.fxml"));
-                HBox hBox = fxmlLoader.load();
-                ListController listController = fxmlLoader.getController();
-                listController.setGarageDetails(garageDetails);
-                infoContainer.getChildren().add(hBox);
-            }catch (Exception e){
-                System.out.println(e.getMessage());
-            }
+
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+                    fxmlLoader.setLocation(getClass().getResource("list.fxml"));
+                    HBox hBox = fxmlLoader.load();
+                    ListController listController = fxmlLoader.getController();
+                    listController.setGarageDetails(garageDetails);
+                    infoContainer.getChildren().add(hBox);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+
 
         }
     }
@@ -144,9 +149,9 @@ public class RentPageController {
         map_view.setVisible(true);
         dropdown_map.setVisible(false);
         updown_maps.setVisible(true);
-        back_home.setOnAction(event -> backTohome());
+//        back_home.setOnAction(event -> backTohome());
 
-        getAllGarageDetails = FirebaseConfig.getAllGarageDetails();
+        getAllGarageDetails = FirebaseConfig.getAllGarageDetails("garage_details");
         System.out.println(getAllGarageDetails);
         System.out.println(getAllGarageDetails.get(0).getClass());
 
@@ -303,7 +308,7 @@ public class RentPageController {
                     function loadMapScenario() {
                         map = new Microsoft.Maps.Map(document.getElementById('map'), {
                             credentials: 'AkcKTkaCZKKAdrUrSATJWbV7xVleTJ1HtvHxp04_PKIVO1w5SSJGokoMWimJITcj',
-                            zoom: 10,
+                            zoom: 20,
                             center: new Microsoft.Maps.Location(0, 0)
                         });
 

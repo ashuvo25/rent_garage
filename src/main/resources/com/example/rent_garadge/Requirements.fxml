@@ -6,19 +6,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="576.0" prefWidth="415.0" style="-fx-background-color: #e7fff9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nothing">
+<AnchorPane prefHeight="576.0" prefWidth="415.0" style="-fx-background-color: #e7fff9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.RequirementsController">
     <children>
         <Text layoutX="18.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Your Requirements." wrappingWidth="236.63671875">
             <font>
                 <Font name="Britannic Bold" size="20.0" />
             </font>
         </Text>
-      <CheckBox layoutX="63.0" layoutY="213.0" mnemonicParsing="false" text="Smoke Free" />
-      <CheckBox layoutX="63.0" layoutY="247.0" mnemonicParsing="false" text="Smoke Ditection" />
-      <CheckBox layoutX="63.0" layoutY="374.0" mnemonicParsing="false" text="Security Camera Maintained (Live)" />
-      <CheckBox layoutX="63.0" layoutY="342.0" mnemonicParsing="false" text="Climate Controlled" />
-      <CheckBox layoutX="63.0" layoutY="280.0" mnemonicParsing="false" text="Locked Area" />
-      <CheckBox layoutX="63.0" layoutY="311.0" mnemonicParsing="false" text="Private Entrance" />
-      <Button layoutX="182.0" layoutY="430.0" mnemonicParsing="false" text="Next" />
+        <CheckBox fx:id="smokefree" layoutX="63.0" layoutY="213.0" mnemonicParsing="false" text="Smoke Free" />
+        <CheckBox fx:id="smokeditection" layoutX="63.0" layoutY="247.0" mnemonicParsing="false" text="Smoke Ditection" />
+        <CheckBox fx:id="camera" layoutX="63.0" layoutY="374.0" mnemonicParsing="false" text="Security Camera Maintained (Live)" />
+        <CheckBox fx:id="climatecontrolled" layoutX="63.0" layoutY="342.0" mnemonicParsing="false" text="Climate Controlled" />
+        <CheckBox fx:id="lockarea" layoutX="63.0" layoutY="280.0" mnemonicParsing="false" text="Locked Area" />
+        <CheckBox fx:id="privateentrnce" layoutX="63.0" layoutY="311.0" mnemonicParsing="false" text="Private Entrance" />
+        <Button fx:id="next_2" layoutX="182.0" layoutY="430.0" mnemonicParsing="false" text="Next" />
     </children>
 </AnchorPane>

@@ -50,7 +50,7 @@
                </font></Text>
             <Pane fx:id="details_pane" layoutX="28.0" layoutY="123.0" prefHeight="149.0" prefWidth="299.0" style="-fx-background-color: #f1f1f1; -fx-background-radius: 20px; -fx-border-radius: 20px;" styleClass="details-pane">
                <children>
-                  <Button fx:id="prof_edit" layoutX="4.0" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="270.0" style="-fx-background-color: #f1f1f1;" text="Edit Profile                                          &gt;" />
+                  <Button fx:id="prof_edit" layoutX="9.0" layoutY="4.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="260.0" style="-fx-background-color: #f1f1f1;" text="Edit Profile                                          &gt;" />
                   <Button fx:id="prof_edit1" layoutX="4.0" layoutY="28.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="270.0" style="-fx-background-color: #f1f1f1;" text="Change Password                                &gt;" />
                   <Button fx:id="prof_edit2" layoutX="4.0" layoutY="55.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="270.0" style="-fx-background-color: #f1f1f1;" text="Settings                                               &gt;" />
                   <Button fx:id="prof_edit3" layoutX="4.0" layoutY="83.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="270.0" style="-fx-background-color: #f1f1f1;" text="Terms &amp; Conditions                            &gt;" />

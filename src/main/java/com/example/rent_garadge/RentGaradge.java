@@ -18,7 +18,7 @@ public class RentGaradge extends Application {
     static Map<String, Object> garageDetails;
 
 
-    public static String user_id;
+//    public static String user_id;
 
     @Override
     //shuvo

@@ -65,7 +65,7 @@ public class RequirementsController {
     private void openNextWindow(Map<String, Object> selections) {
         try {
             // Load the FXML file and create a new scene
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Position_Specification.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PositionSpecification.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
             // Get the controller after loading the FXML

@@ -64,7 +64,7 @@ public class home_controller {
 
     private void globalChat() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GlobalChat.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Chat.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Profile");
             stage.setScene(new Scene(fxmlLoader.load()));

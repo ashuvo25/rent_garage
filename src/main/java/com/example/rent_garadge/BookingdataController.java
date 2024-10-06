@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import java.io.IOException;
 import java.util.Map;
@@ -35,8 +37,18 @@ public class BookingdataController {
             String val=FirebaseConfig.updateFieldInDocument("garage_slot",selections.get("garageowner")+"",selections.get("slot")+"",(Object) b);
             System.out.println(val);
 
+            // Get the current date and time
+            LocalDateTime currentDateTime = LocalDateTime.now();
 
-//            selections.put("start_time", System.currentTimeMillis());
+            // Define the format to include seconds
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+            // Format and print the date and time with seconds
+            String formattedDateTime = currentDateTime.format(formatter);
+            System.out.println("Current Date and Time: " + formattedDateTime);
+
+
+            selections.put("start_time", formattedDateTime);
 
             String som=FirebaseConfig.datainput("rent_list",selections.get("random")+"",selections);
             System.out.println(som);

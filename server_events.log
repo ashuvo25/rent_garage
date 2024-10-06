@@ -1,0 +1,28 @@
+Sun Oct 06 02:31:08 BDT 2024: Server started
+Sun Oct 06 02:31:36 BDT 2024: Server started
+Sun Oct 06 02:32:51 BDT 2024: New client connected: Socket[addr=/192.168.31.215,port=8737,localport=12345]
+Sun Oct 06 02:39:56 BDT 2024: Error handling client: Connection reset
+Sun Oct 06 02:39:56 BDT 2024: Adnan has left the chat.
+Sun Oct 06 02:45:29 BDT 2024: New client connected: Socket[addr=/127.0.0.1,port=11315,localport=12345]
+Sun Oct 06 02:45:36 BDT 2024: Error handling client: Connection reset
+Sun Oct 06 02:45:36 BDT 2024: null has left the chat.
+Sun Oct 06 02:49:11 BDT 2024: New client connected: Socket[addr=/192.168.31.215,port=11347,localport=12345]
+Sun Oct 06 02:49:25 BDT 2024: Server started
+Sun Oct 06 02:51:51 BDT 2024: New client connected: Socket[addr=/192.168.31.215,port=9007,localport=12345]
+Sun Oct 06 02:53:46 BDT 2024: Adnan: hello
+Sun Oct 06 02:54:07 BDT 2024: Adnan: do you know me?
+Sun Oct 06 02:56:29 BDT 2024: New client connected: Socket[addr=/192.168.31.215,port=9916,localport=12345]
+Sun Oct 06 02:56:44 BDT 2024: New client connected: Socket[addr=/192.168.31.54,port=10817,localport=12345]
+Sun Oct 06 02:56:58 BDT 2024: bappy: hello
+Sun Oct 06 02:57:03 BDT 2024: ss:  xcxcx
+Sun Oct 06 02:57:11 BDT 2024: ss: dfvdvcxvfvxcvxc
+Sun Oct 06 03:49:24 BDT 2024: Server started
+Sun Oct 06 03:50:32 BDT 2024: Server started
+Sun Oct 06 03:51:51 BDT 2024: New client connected: Socket[addr=/192.168.31.215,port=13784,localport=12345]
+Sun Oct 06 03:56:52 BDT 2024: New client connected: Socket[addr=/127.0.0.1,port=14745,localport=12345]
+Sun Oct 06 04:00:36 BDT 2024: Error handling client: Connection reset
+Sun Oct 06 04:00:36 BDT 2024: Error handling client: Connection reset
+Sun Oct 06 04:01:47 BDT 2024: New client connected: Socket[addr=/192.168.31.215,port=9139,localport=12345]
+Sun Oct 06 04:04:27 BDT 2024: a@g.com: hiii
+Sun Oct 06 04:04:59 BDT 2024: Error handling client: Connection reset
+Sun Oct 06 04:04:59 BDT 2024: a@g.com has left the chat.
