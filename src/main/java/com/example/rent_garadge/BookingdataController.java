@@ -52,7 +52,7 @@ public class BookingdataController {
 
             String som=FirebaseConfig.datainput("rent_list",selections.get("random")+"",selections);
             System.out.println(som);
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homes.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cencle.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
             // Get the controller after loading the FXML

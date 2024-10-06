@@ -12,39 +12,30 @@
    <children>
       <Pane fx:id="prof_details" layoutY="153.0" prefHeight="347.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css">
          <children>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/ProfileItems/registration-24.png" />
-               </image>
-            </ImageView>
-            <Text fx:id="garage_registration_no" fill="#000000a8" layoutX="73.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Albert Bappy" wrappingWidth="246.13671875">
-               <font>
-                  <Font name="Times New Roman" size="14.0" />
-               </font></Text>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="38.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="38.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Icons/ProfileItems/phone-25.png" />
                </image>
             </ImageView>
-            <Text fx:id="owner_phone_number" fill="#000000a8" layoutX="71.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+880 1645 430417" wrappingWidth="246.13671875">
+            <Text fx:id="owner_phone_number" fill="#000000a8" layoutX="71.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+880 1645 430417" wrappingWidth="246.13671875">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Text>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Icons/ProfileItems/email-25.png" />
                </image>
             </ImageView>
-            <Text fx:id="owner_gmail1" fill="#000000a8" layoutX="73.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="owner_email" text="albertbappy@gmail.xyz" wrappingWidth="246.13671875">
+            <Text fx:id="owner_gmail1" fill="#000000a8" layoutX="73.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="owner_email" text="albertbappy@gmail.xyz" wrappingWidth="246.13671875">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Text>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Icons/ProfileItems/location-pin-25.png" />
                </image>
             </ImageView>
-            <Text fx:id="owner_location" fill="#000000a8" layoutX="73.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ECB,Chattar  R road Dhaka,Bangladesh" wrappingWidth="246.13671875">
+            <Text fx:id="owner_location" fill="#000000a8" layoutX="73.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ECB,Chattar  R road Dhaka,Bangladesh" wrappingWidth="246.13671875">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Text>

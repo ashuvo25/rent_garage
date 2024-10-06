@@ -216,6 +216,7 @@ public class bookingPlanController {
         rentDetails.put("renter",RentGaradge.user_id);
         rentDetails.put("address",garageDetails.get("address"));
         rentDetails.put("city",garageDetails.get("city"));
+        rentDetails.put("state","run");
         Random random = new Random();
         int randomValue = Math.abs(random.nextInt()); // Ensures the value is non-negative
         rentDetails.put("random", randomValue * 500 + "");
@@ -264,11 +265,11 @@ public class bookingPlanController {
     // Get the selected parking duration
     private String getSelectedDuration() {
         if (oneHourCheckBox.isSelected()) {
-            return "1 hour";
+            return "1";
         } else if (twoHourCheckBox.isSelected()) {
-            return "2 hours";
+            return "2";
         } else if (fourHourCheckBox.isSelected()) {
-            return "4 hours";
+            return "4";
         }
         return "No duration selected";
     }

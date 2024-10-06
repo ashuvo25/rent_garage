@@ -12,30 +12,21 @@
    <children>
       <Pane fx:id="prof_details" layoutY="137.0" prefHeight="363.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css">
          <children>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="41.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/ProfileItems/registration-24.png" />
-               </image>
-            </ImageView>
-            <Text fx:id="garage_registration_no" fill="#000000a8" layoutX="74.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Albert Bappy" wrappingWidth="246.13671875">
-               <font>
-                  <Font name="Times New Roman" size="14.0" />
-               </font></Text>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Icons/ProfileItems/phone-25.png" />
                </image>
             </ImageView>
-            <Text fx:id="owner_phone_number" fill="#000000a8" layoutX="72.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+880 1645 430417" wrappingWidth="246.13671875">
+            <Text fx:id="owner_phone_number" fill="#000000a8" layoutX="72.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+880 1645 430417" wrappingWidth="246.13671875">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Text>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="42.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="42.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Icons/ProfileItems/email-25.png" />
                </image>
             </ImageView>
-            <Text fx:id="owner_gmail1" fill="#000000a8" layoutX="72.0" layoutY="83.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="owner_email" text="albertbappy@gmail.xyz" wrappingWidth="246.13671875">
+            <Text fx:id="owner_gmail1" fill="#000000a8" layoutX="72.0" layoutY="75.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="owner_email" text="albertbappy@gmail.xyz" wrappingWidth="246.13671875">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Text>
@@ -70,7 +61,7 @@
          </children>
       </Pane>
       <Circle fx:id="profile_image_view" fill="DODGERBLUE" layoutX="180.0" layoutY="54.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text fx:id="owner_name" layoutX="118.0" layoutY="112.0" opacity="0.78" strokeType="OUTSIDE" strokeWidth="0.0" text="\@USERNAME" wrappingWidth="174.13672637939453">
+      <Text fx:id="owner_name" layoutX="90.0" layoutY="113.0" opacity="0.78" strokeType="OUTSIDE" strokeWidth="0.0" text="\@USERNAME" textAlignment="CENTER" wrappingWidth="174.13672637939453">
          <font>
             <Font size="15.0" />
          </font>
