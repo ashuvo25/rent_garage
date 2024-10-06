@@ -13,12 +13,12 @@
                 <Font name="Britannic Bold" size="20.0" />
             </font>
         </Text>
-        <CheckBox fx:id="smokefree" layoutX="63.0" layoutY="213.0" mnemonicParsing="false" text="Smoke Free" />
-        <CheckBox fx:id="smokeditection" layoutX="63.0" layoutY="247.0" mnemonicParsing="false" text="Smoke Ditection" />
-        <CheckBox fx:id="camera" layoutX="63.0" layoutY="374.0" mnemonicParsing="false" text="Security Camera Maintained (Live)" />
-        <CheckBox fx:id="climatecontrolled" layoutX="63.0" layoutY="342.0" mnemonicParsing="false" text="Climate Controlled" />
-        <CheckBox fx:id="lockarea" layoutX="63.0" layoutY="280.0" mnemonicParsing="false" text="Locked Area" />
-        <CheckBox fx:id="privateentrnce" layoutX="63.0" layoutY="311.0" mnemonicParsing="false" text="Private Entrance" />
-        <Button fx:id="next_2" layoutX="182.0" layoutY="430.0" mnemonicParsing="false" text="Next" />
+      <CheckBox fx:id="smokefree" layoutX="63.0" layoutY="213.0" mnemonicParsing="false" text="Smoke Free" />
+      <CheckBox fx:id="smokeditection" layoutX="63.0" layoutY="247.0" mnemonicParsing="false" text="Smoke Ditection" />
+      <CheckBox fx:id="camera" layoutX="63.0" layoutY="374.0" mnemonicParsing="false" text="Security Camera Maintained (Live)" />
+      <CheckBox fx:id="climatecontrolled" layoutX="63.0" layoutY="342.0" mnemonicParsing="false" text="Climate Controlled" />
+      <CheckBox fx:id="lockarea" layoutX="63.0" layoutY="280.0" mnemonicParsing="false" text="Locked Area" />
+      <CheckBox fx:id="privateentrnce" layoutX="63.0" layoutY="311.0" mnemonicParsing="false" text="Private Entrance" />
+      <Button fx:id="next_2" layoutX="182.0" layoutY="430.0" mnemonicParsing="false" text="Next" />
     </children>
 </AnchorPane>

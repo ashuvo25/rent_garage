@@ -74,7 +74,7 @@ public class log_host {
             Login_controller controller = fxmlLoader.getController();
 
             // Pass the selections to the new controller
-            controller.whichpage("veichle_position_selection.fxml");
+            controller.whichpage("veichlePositionSelection.fxml");
 
 
             stage.show(); // Show the new stage

@@ -51,7 +51,6 @@ public class prof_image_takeController {
 
         RentGaradge.garageDetails.put("owner_number",num);
         choose_photo.setOnAction(event -> handleChoosePhoto());
-        prof_img_next.setOnAction(event -> handleTakePhoto());
         prof_img_next.setOnAction(event -> openNextWindow());
 
 

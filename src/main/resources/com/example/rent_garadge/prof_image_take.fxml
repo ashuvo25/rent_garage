@@ -18,7 +18,7 @@
          </children>
       </Pane>
       <Button fx:id="prof_img_next" layoutX="264.0" layoutY="409.0" mnemonicParsing="false" text="Next" />
-      <Button fx:id="skip" layoutX="301.0" layoutY="26.0" mnemonicParsing="false" text="Skip" />
+      <Button layoutX="301.0" layoutY="26.0" mnemonicParsing="false" text="Skip" />
       <TextField fx:id="phone_number" layoutX="106.0" layoutY="238.0" promptText="Phone Number" />
    </children>
 </Pane>
