@@ -38,7 +38,7 @@
                     </padding>
                 </TextFlow>
                 <Accordion layoutX="66.0" layoutY="223.0" />
-                <Text fx:id="logo1" layoutX="139.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select your location." wrappingWidth="226.0771484375">
+                <Text fx:id="logo1" layoutX="101.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select your location." wrappingWidth="226.0771484375">
                     <font>
                         <Font name="Britannic Bold" size="16.0" />
                     </font>
@@ -61,7 +61,7 @@
                         </CheckBox>
                </children>
                 </AnchorPane>
-                <Text layoutX="162.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?Which veichle is yours" textAlignment="RIGHT" wrappingWidth="200.81640625">
+                <Text layoutX="78.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Which veichle is yours?" textAlignment="RIGHT" wrappingWidth="200.81640625">
                     <font>
                         <Font name="Britannic Bold" size="16.0" />
                     </font>

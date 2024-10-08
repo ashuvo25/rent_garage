@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
@@ -21,7 +20,7 @@
         </Pane>
 
         <!-- Dropdown for selecting servers (port 8080 by default) -->
-        <ComboBox fx:id="dropdownMenu" layoutX="130.0" layoutY="14.0" prefWidth="150.0" promptText="Servers - 8080" styleClass="servers_butt" />
+        <ComboBox fx:id="dropdownMenu" layoutX="130.0" layoutY="14.0" prefHeight="42.0" prefWidth="169.0" promptText="Servers - 8080" styleClass="servers_butt" />
 
         <!-- Back button to go to the previous screen -->
         <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #f1f1f1;" styleClass="back_button" text="Back" />

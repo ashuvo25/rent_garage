@@ -8,15 +8,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.webController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.notocontrol">
     <children>
         <Pane fx:id="nav_bar" layoutX="25.0" layoutY="427.0" prefHeight="59.0" prefWidth="309.0" styleClass="nav_bar" stylesheets="@desing.css">
             <children>
                 <Button fx:id="home_btn" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" styleClass="home_btn" stylesheets="@desing.css" text="" />
                 <Button fx:id="home_btn1" layoutX="78.0" layoutY="14.0" mnemonicParsing="false" styleClass="map_btn" stylesheets="@desing.css" text="" />
                 <Button fx:id="home_btn2" layoutX="259.0" layoutY="15.0" mnemonicParsing="false" styleClass="noti_btn" text="" />
-                <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" styleClass="rnt_btn" text="Button" />
-                <Button layoutX="203.0" layoutY="15.0" mnemonicParsing="false" styleClass="frn_btn" text="Button" />
+                <Button fx:id="home_btn3"  layoutX="140.0" layoutY="14.0" mnemonicParsing="false" styleClass="rnt_btn" text="Button" />
+                <Button fx:id="home_btn4"  layoutX="203.0" layoutY="15.0" mnemonicParsing="false" styleClass="frn_btn" text="Button" />
             </children>
         </Pane>
       <Text layoutX="25.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification">

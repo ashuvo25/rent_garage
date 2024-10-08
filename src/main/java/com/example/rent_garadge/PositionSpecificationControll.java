@@ -29,6 +29,8 @@ public class PositionSpecificationControll {
 
     @FXML
     private Button next_3;
+    @FXML
+    private Button back_to_pre;
 
     private Map<String, Object> details;
 
@@ -41,6 +43,7 @@ public class PositionSpecificationControll {
     private void initialize() {
         // Set action for the "Next" button
         next_3.setOnAction(_ -> handleNextButton());
+        back_to_pre.setOnAction(_ -> backTohome());
     }
 
     private void handleNextButton() {
@@ -92,6 +95,20 @@ public class PositionSpecificationControll {
 
             // Close the current stage
             Stage currentStage = (Stage) next_3.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void backTohome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Requirements.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Home");
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+            Stage currentStage = (Stage) back_to_pre.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();

@@ -32,6 +32,8 @@ public class RequirementsController {
 
     @FXML
     private Button next_2;
+  @FXML
+    private Button back_to_pre;
 
     private Map<String, Object> allgarageDetails;
 
@@ -44,6 +46,7 @@ public class RequirementsController {
     private void initialize() {
         // Set action on the "Next" button to handle the checkpoint selections
         next_2.setOnAction(event -> handleNextButton());
+        back_to_pre.setOnAction(event -> backTohome());
     }
 
     private void handleNextButton() {
@@ -82,6 +85,20 @@ public class RequirementsController {
 
             // Close the current stage
             Stage currentStage = (Stage) next_2.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void backTohome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LocationType.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Home");
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+            Stage currentStage = (Stage) back_to_pre.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();

@@ -615,5 +615,31 @@ AnchorPane {
 .servers_butt:hover {
     -fx-border-color: #28a745; /* Green border on hover */
 }
+.check-box-input{
+    -fx-background-insets:3;
+    -fx-border-style:solid;
+    -fx-border-radius:7px;
+    -fx-background-radius:7px;
+    -fx-border-color:  darkblue;
+    -fx-text-fill: #fff;
+    -fx-font-size: 1.1em;
+    /*-fx-background-radius: 10;*/
+    -fx-background-color: rgba(44, 62, 80, 0.95);
+    -fx-effect: dropshadow(gaussian, #333, 10, 0, 0, 10);
 
+}
+
+.check-box-input_without{
+    -fx-background-insets:3;
+    -fx-border-style:solid;
+    -fx-border-radius:7px;
+    -fx-background-radius:7px;
+    -fx-border-color:  darkblue;
+    -fx-text-fill: #000;
+    -fx-font-size: 1.1em;
+    /*-fx-background-radius: 10;*/
+    /*-fx-background-color: rgba(44, 62, 80, 0.95);*/
+    -fx-effect: dropshadow(gaussian, rgba(51, 51, 51, 0.63), 10, 0, 0, 10);
+
+}
 

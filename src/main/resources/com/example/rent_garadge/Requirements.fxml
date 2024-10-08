@@ -1,24 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="576.0" prefWidth="415.0" style="-fx-background-color: #e7fff9;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.RequirementsController">
+<AnchorPane prefHeight="500.0" prefWidth="360.0" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.RequirementsController">
     <children>
-        <Text layoutX="18.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Your Requirements." wrappingWidth="236.63671875">
+        <Text layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Your Requirements." wrappingWidth="236.63671875">
             <font>
                 <Font name="Britannic Bold" size="20.0" />
             </font>
         </Text>
-      <CheckBox fx:id="smokefree" layoutX="63.0" layoutY="213.0" mnemonicParsing="false" text="Smoke Free" />
-      <CheckBox fx:id="smokeditection" layoutX="63.0" layoutY="247.0" mnemonicParsing="false" text="Smoke Ditection" />
-      <CheckBox fx:id="camera" layoutX="63.0" layoutY="374.0" mnemonicParsing="false" text="Security Camera Maintained (Live)" />
-      <CheckBox fx:id="climatecontrolled" layoutX="63.0" layoutY="342.0" mnemonicParsing="false" text="Climate Controlled" />
-      <CheckBox fx:id="lockarea" layoutX="63.0" layoutY="280.0" mnemonicParsing="false" text="Locked Area" />
-      <CheckBox fx:id="privateentrnce" layoutX="63.0" layoutY="311.0" mnemonicParsing="false" text="Private Entrance" />
-      <Button fx:id="next_2" layoutX="182.0" layoutY="430.0" mnemonicParsing="false" text="Next" />
+      <CheckBox fx:id="smokefree" layoutX="60.0" layoutY="147.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="141.0" styleClass="check-box-input_without" text="Smoke Free">
+         <padding>
+            <Insets left="5.0" />
+         </padding></CheckBox>
+      <CheckBox fx:id="smokeditection" layoutX="60.0" layoutY="194.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="141.0" styleClass="check-box-input_without" text="Smoke Ditection">
+         <padding>
+            <Insets left="5.0" />
+         </padding></CheckBox>
+      <CheckBox fx:id="camera" layoutX="60.0" layoutY="356.0" mnemonicParsing="false" prefHeight="30.0" styleClass="check-box-input_without" text="Security Camera Maintained (Live)">
+         <padding>
+            <Insets left="5.0" />
+         </padding></CheckBox>
+      <CheckBox fx:id="climatecontrolled" layoutX="60.0" layoutY="314.0" mnemonicParsing="false" prefHeight="30.0" styleClass="check-box-input_without" text="Climate Controlled">
+         <padding>
+            <Insets left="5.0" />
+         </padding></CheckBox>
+      <CheckBox fx:id="lockarea" layoutX="60.0" layoutY="233.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="141.0" styleClass="check-box-input_without" text="Locked Area">
+         <padding>
+            <Insets left="5.0" />
+         </padding></CheckBox>
+      <CheckBox fx:id="privateentrnce" layoutX="60.0" layoutY="273.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="141.0" styleClass="check-box-input_without" text="Private Entrance">
+         <padding>
+            <Insets left="5.0" />
+         </padding></CheckBox>
+      <Button fx:id="next_2" layoutX="244.0" layoutY="434.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="91.0" styleClass="check-box-input" text="Next" />
+      <Button fx:id="back_to_pre" layoutX="37.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-color: #fff;" styleClass="back_button" text="Button" />
     </children>
 </AnchorPane>

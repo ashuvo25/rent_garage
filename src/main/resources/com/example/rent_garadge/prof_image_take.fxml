@@ -13,12 +13,12 @@
       <Pane fx:id="popup_pane" layoutY="498.0" prefHeight="172.0" prefWidth="360.0" style="-fx-background-color: #111111;" styleClass="popup_pane">
          <children>
             <Button fx:id="dropdown_mutton" layoutX="160.0" mnemonicParsing="false" onAction="#handleDropdownMutton" prefHeight="37.0" prefWidth="44.0" styleClass="dropdown" />
-            <Button fx:id="take_photo" layoutX="40.0" layoutY="54.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="278.0" text="Take Photo" />
-            <Button fx:id="choose_photo" layoutX="40.0" layoutY="96.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="278.0" text="Choose From gallary" />
+            <Button fx:id="take_photo" layoutX="40.0" layoutY="54.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="278.0" styleClass="check-box-input_without" text="Take Photo" />
+            <Button fx:id="choose_photo" layoutX="40.0" layoutY="96.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="278.0" styleClass="check-box-input_without" text="Choose From gallary" />
          </children>
       </Pane>
-      <Button fx:id="prof_img_next" layoutX="264.0" layoutY="409.0" mnemonicParsing="false" text="Next" />
-      <Button layoutX="301.0" layoutY="26.0" mnemonicParsing="false" text="Skip" />
-      <TextField fx:id="phone_number" layoutX="106.0" layoutY="238.0" promptText="Phone Number" />
+      <Button fx:id="prof_img_next" layoutX="215.0" layoutY="403.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="check-box-input" text="Next" />
+      <Button layoutX="290.0" layoutY="26.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" styleClass="check-box-input" text="Skip" />
+      <TextField fx:id="phone_number" layoutX="79.0" layoutY="201.0" prefHeight="49.0" prefWidth="185.0" promptText="Phone Number" style="-fx-background-radius: 10;" />
    </children>
 </Pane>

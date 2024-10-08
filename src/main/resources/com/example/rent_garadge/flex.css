@@ -1,4 +1,18 @@
 .Butt{
+    -fx-background-color: #053059;
+    -fx-text-fill: #000;
+    -fx-font-size: 1.1em;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, #AAAAAA, 10, 0, 0, 10);
+}
+.inp_butt {
+    -fx-pref-height: 40;
+    -fx-pref-width: 130;
     -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-size: 1.1em;
+    -fx-alignment: center_left;
+    -fx-background-radius: 10;
 
+    -fx-effect: dropshadow(gaussian, #AAAAAA, 10, 0, 0, 10);
 }

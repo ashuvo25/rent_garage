@@ -31,7 +31,10 @@ public class LocationTypeControl {
     private TextField address_id;
 
     @FXML
-    private Button next_1; // Ensure the fx:id is set in your FXML
+    private Button next_1;
+
+    @FXML
+    private Button back_to_pre;
 
     private Map<String, Object> allgarageDetails;
 
@@ -39,6 +42,7 @@ public class LocationTypeControl {
     private void initialize() {
         // Set up action listener for Next button
         next_1.setOnAction(event -> handleNextButton());
+        back_to_pre.setOnAction(event -> backTohome());
     }
 
     public void garageDetails(Map<String, Object> selections) {
@@ -103,6 +107,20 @@ public class LocationTypeControl {
 
             // Close the current stage
             Stage currentStage = (Stage) next_1.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void backTohome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("veichlePositionSelection.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Home");
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+            Stage currentStage = (Stage) back_to_pre.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();

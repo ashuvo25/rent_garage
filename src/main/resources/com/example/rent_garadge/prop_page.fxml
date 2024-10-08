@@ -21,21 +21,21 @@
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Text>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Icons/ProfileItems/email-25.png" />
                </image>
             </ImageView>
-            <Text fx:id="owner_gmail1" fill="#000000a8" layoutX="73.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="owner_email" text="albertbappy@gmail.xyz" wrappingWidth="246.13671875">
+            <Text fx:id="owner_gmail1" fill="#000000a8" layoutX="73.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="owner_email" text="albertbappy@gmail.xyz" wrappingWidth="246.13671875">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Text>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Icons/ProfileItems/location-pin-25.png" />
                </image>
             </ImageView>
-            <Text fx:id="owner_location" fill="#000000a8" layoutX="73.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ECB,Chattar  R road Dhaka,Bangladesh" wrappingWidth="246.13671875">
+            <Text fx:id="owner_location" fill="#000000a8" layoutX="73.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ECB,Chattar  R road Dhaka,Bangladesh" wrappingWidth="246.13671875">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Text>
@@ -61,7 +61,7 @@
          </children>
       </Pane>
       <Circle fx:id="profile_image_view" fill="DODGERBLUE" layoutX="167.0" layoutY="54.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text fx:id="owner_name" layoutX="107.0" layoutY="123.0" opacity="0.78" strokeType="OUTSIDE" strokeWidth="0.0" text="\@USERNAME" wrappingWidth="146.13672637939453">
+      <Text fx:id="owner_name" layoutX="119.0" layoutY="123.0" opacity="0.78" strokeType="OUTSIDE" strokeWidth="0.0" text="\@USERNAME" wrappingWidth="146.13672637939453">
          <font>
             <Font size="15.0" />
          </font>

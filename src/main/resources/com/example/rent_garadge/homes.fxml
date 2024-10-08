@@ -36,17 +36,31 @@
                <children>
                   <Pane layoutY="10.0" prefHeight="102.0" prefWidth="134.0" styleClass="cell1" stylesheets="@desing.css">
                      <children>
-                        <Text layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Instant Booking" wrappingWidth="135.0">
+                        <Text layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Garage" wrappingWidth="73.79998779296875">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Text>
-                        <Button layoutX="104.0" layoutY="88.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="29.0" styleClass="arrow_btn" />
+                        <Button fx:id="add_garage" layoutX="97.0" layoutY="71.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="29.0" styleClass="arrow_btn" />
                      </children>
                   </Pane>
-                  <Pane layoutX="174.0" layoutY="10.0" prefHeight="102.0" prefWidth="113.0" styleClass="cell2" />
-                  <Pane layoutY="140.0" prefHeight="102.0" prefWidth="148.0" styleClass="cell3" />
-                  <Pane layoutX="174.0" layoutY="140.0" prefHeight="102.0" prefWidth="113.0" styleClass="cell4" />
+                  <Pane layoutX="174.0" layoutY="10.0" prefHeight="102.0" prefWidth="113.0" styleClass="cell2">
+                     <children>
+                        <Text layoutX="18.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Garage" wrappingWidth="73.79998779296875">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="running_garage" layoutX="92.0" layoutY="78.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="29.0" style="-fx-background-color: #d9eeff;" styleClass="arrow_btn" />
+                     </children></Pane>
+                  <Pane layoutY="140.0" prefHeight="102.0" prefWidth="148.0" styleClass="cell3">
+                     <children>
+                        <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coming" />
+                     </children></Pane>
+                  <Pane layoutX="174.0" layoutY="140.0" prefHeight="102.0" prefWidth="113.0" styleClass="cell4">
+                     <children>
+                        <Text layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coming" />
+                     </children></Pane>
                </children>
             </Pane>
 

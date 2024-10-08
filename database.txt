@@ -19,6 +19,12 @@ q@g.com: hse
 a@g.com: gulon
 w@g.com: hots
 q@g.com: okay
-a@g.com: hi adnan
-q@g.com: hello shuvo
-w@g.com: hello Gojo
+a@g.com: hi
+w@g.com: i am gojo
+w@g.com: hello all
+shuvo@gmail.com: go
+gojo@gmail.com: hi
+a@g.com: hi
+a@g.com: hello
+gojo@gmail.com: hi
+shuvo@gmail.com: shuvo

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane fx:id="bvbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.log_host">
+<Pane fx:id="bvbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.log_host">
    <children>
-      <Button fx:id="hom_user" layoutX="35.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" text="Find Garadge" />
+      <Button fx:id="hom_user" layoutX="35.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" text="Find Garage" />
       <Button fx:id="hom_host" layoutX="196.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Become Host" />
       <Button fx:id="hom_log" layoutX="85.0" layoutY="446.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="340.0" stylesheets="@desing.css" text="Login Existing Account !" />
       <Label layoutX="72.0" layoutY="79.0" text="ParkMyGarage" textFill="WHITE">
