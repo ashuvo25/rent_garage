@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="360.0" style="-fx-background-color: #fdfeff;" stylesheets="@desing.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rent_garadge.bookingPlanController">
+    <children>
+        <Line endX="241.0" layoutX="121.0" layoutY="104.0" startX="-121.0" />
+        <Text layoutX="23.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Number:">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </Text>
+        <CheckBox fx:id="parkNowCheckBox" layoutX="107.0" layoutY="192.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: skyblue; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text=" I want to park right now" />
+        <Button fx:id="vehical" layoutX="162.0" layoutY="114.0" mnemonicParsing="false" text="Car" />
+        <Text layoutX="31.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set the parking time:">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </Text>
+        <Text layoutX="26.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the duration you want to book for:">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </Text>
+        <CheckBox fx:id="oneHourCheckBox" layoutX="25.0" layoutY="338.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: skyblue; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text="1 hour">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="twoHourCheckBox" layoutX="132.0" layoutY="338.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: skyblue; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text="2 hour">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="fourHourCheckBox" layoutX="248.0" layoutY="338.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: skyblue; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text="4 hour">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </CheckBox>
+        <Text layoutX="25.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the parking slot:">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </Text>
+        <CheckBox fx:id="slot01CheckBox" layoutX="25.0" layoutY="405.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: skyblue; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text="P 01">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="slot02CheckBox" layoutX="101.0" layoutY="405.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: skyblue; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text="P 02">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="slot03CheckBox" layoutX="174.0" layoutY="405.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: skyblue; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text="P 03">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="slot04CheckBox" layoutX="253.0" layoutY="405.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: skyblue; -fx-border-width: 2; -fx-border-radius: 3; -fx-padding: 5; -fx-background-radius: 10;" text="P 04">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </CheckBox>
+        <Button fx:id="Next" layoutX="263.0" layoutY="443.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: #e5fffe; -fx-border-color: skyblue; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-insets: 1; -fx-border-width: 2;" text="Next-&gt;" textAlignment="JUSTIFY">
+            <font>
+                <Font name="Bell MT Bold" size="13.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="28.0" fitWidth="24.0" layoutX="321.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+            <image>
+                <Image url="@Icons/icons8-back-button-64.png" />
+            </image>
+        </ImageView>
+        <TextArea layoutY="32.0" prefHeight="73.0" prefWidth="360.0" text="     &#10;                                   &#10;                          " />
+        <Text fill="#ff0808" layoutX="45.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      T&amp;C applies for 30 minutes of the city program" />
+        <Text fx:id="current_date" fill="#4643ff" layoutX="119.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="   10 October 2024" />
+        <Text fx:id="area" layoutX="94.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="       Road-4, Gulshan, Dhaka" />
+        <DatePicker fx:id="date" layoutX="32.0" layoutY="259.0" prefHeight="34.0" prefWidth="150.0" promptText="10/03/2024" />
+        <Button fx:id="BackButton" layoutX="13.0" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" text="BookingPlan" />
+        <ImageView fx:id="back" fitHeight="30.0" fitWidth="24.0" layoutX="12.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Icons/icons8-back-button-64.png" />
+            </image>
+        </ImageView>
+      <TextField fx:id="Plate_num" layoutX="125.0" layoutY="150.0" promptText="GA-1234" />
+    </children>
+</Pane>

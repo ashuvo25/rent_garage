@@ -16,6 +16,11 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.openpnp</groupId>
+            <artifactId>opencv</artifactId>
+            <version>LATEST</version> <!-- Change version based on the latest available -->
+        </dependency>
 
         <dependency>
             <groupId>com.google.firebase</groupId>
@@ -70,7 +75,7 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>17.0.2</version> <!-- For WebView -->
+            <version>LATEST</version> <!-- For WebView -->
         </dependency>
     </dependencies>
 

@@ -72,7 +72,7 @@
                   <Font name="Monospaced Regular" size="10.0" />
                </font>
             </Label>
-            <Label layoutX="207.0" layoutY="64.0" prefHeight="31.0" prefWidth="132.0" text="Rent your garadge ">
+            <Label layoutX="207.0" layoutY="64.0" prefHeight="31.0" prefWidth="132.0" text="Rent your garage ">
                <font>
                   <Font name="Monospaced Bold" size="12.0" />
                </font>
