@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 public class FirebaseConfig {
-    private static String cred = "src/main/java/com/example/rent_garadge/garage-6f5fe-firebase-adminsdk-v6dcj-bae29d0410.json";
+    private static String cred = "Your json file link";
     public static Firestore db;
 
     public static void firestore_connection() {
